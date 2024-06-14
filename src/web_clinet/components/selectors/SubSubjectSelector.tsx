@@ -18,8 +18,6 @@ export const SubSubjectSelector = <T extends IArrayPropsType>({ args }: IArrayPr
     }
   }, [value])
 
-  console.log(value);
-
   return (
     <div style={{marginTop :"5px"}}>
       <Autocomplete

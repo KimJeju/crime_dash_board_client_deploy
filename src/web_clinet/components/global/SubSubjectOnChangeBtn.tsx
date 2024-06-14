@@ -22,16 +22,7 @@ export function SubSubjectOnChangeBtn(){
              seletected_branch_value.branch, 
              seletected_sub_subject_value.category,
              seletected_sub_subject_value.subject
-            );
-
-            console.log(
-                seletected_branch_value.year.toString(),
-                seletected_branch_value.branch, 
-                seletected_sub_subject_value.category,
-                seletected_sub_subject_value.subject
             )
-
-            console.log(sub_subject_data)
 
             setSubDataSubject(sub_subject_data)
         }catch(error){
