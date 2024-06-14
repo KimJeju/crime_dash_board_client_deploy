@@ -6,6 +6,7 @@ import PageError from './web_clinet/components/global/PageError.tsx'
 import CrimeBranch from './web_clinet/pages/crime_branch/CrimeBranch.tsx'
 import { RecoilRoot } from 'recoil'
 import App from './App.tsx'
+import Sorry from './web_clinet/components/global/Sorry.tsx'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,16 @@ const router = createBrowserRouter([
   {
     path: '/branch',
     element: <CrimeBranch />,
+    errorElement: <PageError />
+  },
+  {
+    path: '/public_data_portal',
+    element: <Sorry />,
+    errorElement: <PageError />
+  },
+  {
+    path: '/crime_analsys',
+    element: <Sorry />,
     errorElement: <PageError />
   }
 ])

@@ -99,7 +99,7 @@ export default function SideNav() {
   const navigate = useNavigate();
 
   const handleNavigate = (path: number) => {
-    const link: string[] = ['/branch', '/미정', '/미정', '/미정']
+    const link: string[] = ['/branch', '/public_data_portal', '/crime_analsys',]
 
     navigate(link[path])
   }
@@ -143,7 +143,7 @@ export default function SideNav() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['경찰청데이터', '미정1', '미정2', '미정3'].map((text, index) => (
+          {['경찰청데이터', 'public_data_portal', 'crime_analsys'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }} onClick={() => { handleNavigate(index) }}>
               <ListItemButton
                 sx={{
