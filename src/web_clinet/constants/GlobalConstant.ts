@@ -1,0 +1,1 @@
+export const crime_branch_default_url = "http://192.168.64.4:8892/crime_branch/"
