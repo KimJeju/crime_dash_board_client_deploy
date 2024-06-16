@@ -10,7 +10,7 @@ import { NavBar } from "../../../globals/Componenets/NavBar";
 
 
 const Container = styled.div`
-    padding : 2%;
+    padding : 3%;
 `
 
 const SelectorContainer = styled.div`

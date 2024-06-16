@@ -57,15 +57,13 @@ export default function MainSubjectPieChart({data} : {data : IArgumentType}) {
             ],
             highlightScope: { faded: 'global', highlighted: 'item' },
             faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
-            
           },
         ]}
-        sx={{
-          [`& .${pieArcClasses.root}`]: {
-            fill: 'white',
-            fontSize: 14,
-            display : "flex",
-            justifyContent : "space-around"
+        slotProps={{
+          legend: {
+            direction: 'column',
+            position: { vertical: 'middle', horizontal: 'right' },
+            padding: 5,
           },
         }}
         width={580}

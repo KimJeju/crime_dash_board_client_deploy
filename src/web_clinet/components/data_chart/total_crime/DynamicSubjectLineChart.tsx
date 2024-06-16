@@ -49,10 +49,10 @@ export default function DynamicSubjectLineChart() {
     }
 
     return (
-        <Grid xs={16} className={classes.root}>
+        <Grid item xs={12} className={classes.root}>
             <Typography>2023 총계 범죄발생 추이</Typography>
             <LineChart
-                width={800}
+                width={700}
                 height={500}
                 series={[
                     { data: chart_data.ViolentCrime, label: '강력범죄', yAxisKey: 'leftAxisId' },

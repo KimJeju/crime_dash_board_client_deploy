@@ -5,7 +5,6 @@ import { PieChart } from "@mui/x-charts";
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { IArgumentType } from "../../../interfaces/IPropsModel";
-import { chartSetting } from "../sub_crime/SubHorizontalBarChart";
 const useStyles = makeStyles()(() => {
   return {
     root: {
@@ -36,7 +35,7 @@ export default function AverageSubjectPieChart({data} : {data : IArgumentType}) 
   const column_array = chart_data_columns_to_array(data.args);
 
   return (
-      <Grid item xs={5.7}  className={classes.root}>
+      <Grid item xs={5.8}  className={classes.root}>
       <Typography>{data.key}</Typography>
       <PieChart
         series={[
@@ -48,11 +47,18 @@ export default function AverageSubjectPieChart({data} : {data : IArgumentType}) 
               { id: 3, value: pie_data.AverageSubject[3], label: column_array[3] },
             ],
             highlightScope: { faded: 'global', highlighted: 'item' },
-            faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
-          },
+              },
         ]}
-        {...chartSetting}
-        width={400}
+        slotProps={{
+          legend: {
+            direction: 'column',
+            position: { vertical: 'middle', horizontal: 'right' },
+            padding: 15,
+            
+            
+          },
+        }}
+        width={450}
         height={200}
       />
     </Grid>

@@ -119,12 +119,12 @@ export default function TotalCrimeReport() {
                 </Grid>
 
                 <Grid item xs={12} className={classes.chart_container}>
-                    <Grid container className={classes.left_chart_container}>
+                    <Grid container xs={7} className={classes.left_chart_container}>
                         <AverageSubjectPieChart data={occucrrences_args}/>
                         <AverageSubjectPieChart data={arrest_args}/>
                         <ToTalCrimeBarCharts data={total_data_args} />
                     </Grid>
-                    <Grid container className={classes.right_chart_container}>
+                    <Grid container  xs={5} className={classes.right_chart_container}>
                         <SwarmPlotChart  data={sub_catetory_args}/>
                         <DynamicSubjectLineChart />
                     </Grid>
