@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css'
 import { debounce } from '@mui/material';
 import CrimeBranchWebView from './web_clinet/pages/crime_branch/CrimeBranchWebView';
-import { MobileTest } from './moblie_client/MobileTest';
+import { CrimeBranchMobileView } from './moblie_client/pages/CrimeBranchMobileView';
 
 export function App() {
 
@@ -25,7 +25,7 @@ export function App() {
   if(browerWid <= 800){
     return(
       <>
-      <MobileTest />
+      <CrimeBranchMobileView />
       </>
     )
   }else {
