@@ -1,7 +1,7 @@
 
 import { IPieChartData } from "../../../interfaces/IChartModel";
 import { chart_data_columns_to_array, chart_data_to_array } from "../../../../globals/utils/ChartDataUtil";
-import { PieChart, pieArcClasses } from "@mui/x-charts";
+import { PieChart } from "@mui/x-charts";
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { IArgumentType } from "../../../interfaces/IPropsModel";
