@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useRouteError } from "react-router-dom";
-import SideNav from "../../web_clinet/components/global/SideNav";
 
 
 const ErrorWrapper = styled.div`
@@ -25,8 +24,8 @@ export default function Sorry() {
 
     return (
         <ErrorWrapper>
+            {/* <NavBar /> */}
             <h1>개발중입니다.</h1>
-            <SideNav />
         </ErrorWrapper>
     )
 }

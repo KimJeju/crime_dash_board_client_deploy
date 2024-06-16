@@ -1,16 +1,16 @@
-import { MobileSideNav } from "../components/mobile_global/MobileSideNav";
-import { makeStyles } from "tss-react/mui";
-const useStyles = makeStyles()(() => {
-    return {
-      root: {
-        boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-      },
-    };
-  });
+import { NavBar } from "../../globals/Componenets/NavBar";
+
 
 export function CrimeBranchMobileView(){
+
+    const link_list : Array<string> = [
+        "/mobile_crime_branch",
+        "/mobile_public_data_portal",
+        "/mobile_crime_db_and_analsys",
+    ]
+
     return(
     <>
-    <MobileSideNav />
+    <NavBar link_list={link_list}/>
     </>)
 }

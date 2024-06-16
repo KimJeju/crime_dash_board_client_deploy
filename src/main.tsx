@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import PageError from './globals/Componenets/PageError.tsx'
-import CrimeBranch from './web_clinet/pages/crime_branch/CrimeBranchWebView.tsx'
 import { RecoilRoot } from 'recoil'
 import App from './App.tsx'
 import Sorry from './globals/Componenets/Sorry.tsx'
+import CrimeBranchWebView from './web_clinet/pages/crime_branch/CrimeBranchWebView.tsx'
+import { CrimeBranchMobileView } from './moblie_client/pages/CrimeBranchMobileView.tsx'
 
 const router = createBrowserRouter([
   {
@@ -15,20 +16,26 @@ const router = createBrowserRouter([
     errorElement: <PageError />,
   },
   {
-    path: '/branch',
-    element: <CrimeBranch />,
-    errorElement: <PageError />
+    path: '/web_crime_branch',
+    element: <CrimeBranchWebView />,
+    errorElement: <PageError />,
   },
   {
-    path: '/public_data_portal',
+    path: '/mobile_crime_branch',
+    element: <CrimeBranchMobileView />,
+    errorElement: <PageError />,
+  },
+  {
+    path: '/web_public_data_portal',
     element: <Sorry />,
     errorElement: <PageError />
   },
   {
-    path: '/crime_analsys',
+    path: '/web_crime_db_and_analsys',
     element: <Sorry />,
     errorElement: <PageError />
-  }
+  },
+
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

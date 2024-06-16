@@ -19,16 +19,14 @@ export function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log(browerWid);
 
-
-  if(browerWid <= 800){
-    return(
+  if (browerWid <= 800) {
+    return (
       <>
-      <CrimeBranchMobileView />
+        <CrimeBranchMobileView />
       </>
     )
-  }else {
+  } else {
     return (
       <>
         <CrimeBranchWebView />
@@ -36,7 +34,7 @@ export function App() {
     )
   }
 
- 
+
 }
 
 export default App

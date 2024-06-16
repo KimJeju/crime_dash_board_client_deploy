@@ -78,7 +78,7 @@ export default function MainCrimeReport() {
     return (
         <Grid container xs={12} className={classes.root}>
             <Typography></Typography>
-            <Grid item className={classes.main_pie_container}>
+            <Grid item xs= {12} className={classes.main_pie_container}>
                 <MainSubjectPieChart data={occurence_args} />
                 <MainSubjectPieChart data={arrest_args} />
                 <MainSubjectPieChart data={arrest_people_args} />
@@ -88,7 +88,7 @@ export default function MainCrimeReport() {
                 <Grid item xs={6} className={classes.main_tree_map_container} >
                     <MainTreeMap data={arrest_persent_args} />
                 </Grid>
-                <Grid item xs={5.6} >
+                <Grid item xs={6} >
                     <MainSubjectLineChart data={transition_categorize_args} />
                 </Grid>
             </Grid>

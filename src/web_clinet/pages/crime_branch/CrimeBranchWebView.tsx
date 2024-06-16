@@ -2,16 +2,15 @@ import styled from "styled-components";
 
 //components
 import CrimeBranchTap from "./CrimeBranchTap";
-import SideNav from "../../components/global/SideNav";
 import BranchOnChangeBtn from "../../components/global/BranchOnChangeBtn";
 import { TotalBranchSelector } from "../../components/selectors/TotalBranchSelector";
 import { crime_branch_selector_value } from "../../../globals/constants/CrimeBranch";
+import { NavBar } from "../../../globals/Componenets/NavBar";
+
 
 
 const Container = styled.div`
-    width : calc(100% - 5vw);
-    height : 100vh;
-    margin : 5%;
+    padding : 2%;
 `
 
 const SelectorContainer = styled.div`
@@ -24,13 +23,20 @@ const SelectorContainer = styled.div`
 
 
 export default function CrimeBranchWebView() {
+
+    const link_list : Array<string> = [
+        "/web_crime_branch",
+        "/web_public_data_portal",
+        "/web_crime_db_and_analsys",
+    ]
+
     return (
         <>
+            <NavBar link_list={link_list} />
             <Container>
-                <SideNav />
                 <SelectorContainer>
                     <TotalBranchSelector args={crime_branch_selector_value} />
-                    <BranchOnChangeBtn/>
+                    <BranchOnChangeBtn />
                 </SelectorContainer>
                 <CrimeBranchTap />
             </Container>
