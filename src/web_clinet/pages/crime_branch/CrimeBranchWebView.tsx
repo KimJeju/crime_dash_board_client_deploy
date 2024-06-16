@@ -23,7 +23,7 @@ const SelectorContainer = styled.div`
 `
 
 
-export default function CrimeBranch() {
+export default function CrimeBranchWebView() {
     return (
         <>
             <Container>
