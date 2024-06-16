@@ -1,6 +1,6 @@
 import { BarChart } from '@mui/x-charts/BarChart';
 import { IMainChartData } from "../../../interfaces/IChartModel";
-import { chart_data_to_array, slice_total_avg_data } from "../../../utils/ChartDataUtil";
+import { chart_data_to_array, slice_total_avg_data } from "../../../../globals/utils/ChartDataUtil";
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { IArgumentType } from '../../../interfaces/IPropsModel';

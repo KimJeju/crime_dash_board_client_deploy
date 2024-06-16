@@ -4,11 +4,11 @@ import SubHorizontalBarChart from "../../../components/data_chart/sub_crime/SubH
 import { useRecoilState, useRecoilValue } from "recoil";
 import { subDataSubjectState } from "../../../state/crime_branch/sub/SubDataState";
 import { useMemo } from "react";
-import { get_dynamic_subject_data } from "../../../contexts/CrimeBranchContext";
+import { get_dynamic_subject_data } from "../../../../globals/contexts/CrimeBranchContext";
 import { IArgumentType } from "../../../interfaces/IPropsModel";
 import { SubSubjectSelector } from "../../../components/selectors/SubSubjectSelector";
-import { crime_branch_sub_subject_value } from "../../../constants/CrimeBranch";
 import { SubSubjectOnChangeBtn } from "../../../components/global/SubSubjectOnChangeBtn";
+import { crime_branch_sub_subject_value } from "../../../../globals/constants/CrimeBranch";
 const useStyle = makeStyles()({
     root: {
         padding : "10px",

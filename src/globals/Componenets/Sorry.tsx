@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useRouteError } from "react-router-dom";
-import SideNav from "./SideNav";
+import SideNav from "../../web_clinet/components/global/SideNav";
 
 
 const ErrorWrapper = styled.div`

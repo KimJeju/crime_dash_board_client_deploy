@@ -1,7 +1,7 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 import { mainDataTrainsitionSubjectCaterozieState } from "../../state/crime_branch/main/MainDataState";
 import { main_transition_state } from "../../state/global/SelectorState";
-import { get_subject_categorize_branch_transition } from "../../contexts/CrimeBranchContext";
+import { get_subject_categorize_branch_transition } from "../../../globals/contexts/CrimeBranchContext";
 import { Button } from "@mui/material";
 
 

@@ -4,7 +4,7 @@ import { IHorizontalBarData, IHorizontalBarDataList } from '../../../interfaces/
 import { Box } from '@mui/material';
 import { axisClasses } from '@mui/x-charts';
 
-const chartSetting = {
+export const chartSetting = {
   xAxis: [
     {
       label: '소분류 발생 통계',

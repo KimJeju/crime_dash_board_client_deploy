@@ -1,6 +1,6 @@
 import axios from "axios";
+import { ITotalData } from "../../web_clinet/interfaces/ICrimeBranchModel";
 import { crime_branch_default_url } from "../constants/GlobalConstant";
-import { ITotalData } from "../interfaces/ICrimeBranchModel";
 
 //on load 시 실행 될 함수
 export async function default_data_on_load() {

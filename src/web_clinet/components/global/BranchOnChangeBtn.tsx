@@ -3,7 +3,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { totalCrimebranchState } from "../../state/crime_branch/total/CrimeBranchState";
 import { dynamicSubCategoryState } from "../../state/crime_branch/total/DynamicSubjectState";
 import { arrestAverageState, occurrencesAverageState } from "../../state/crime_branch/total/SubjectAverageState";
-import { select_main_data_on_load, select_sub_data_on_load, seleted_data_on_load } from "../../contexts/CrimeBranchContext";
+import { select_main_data_on_load, select_sub_data_on_load, seleted_data_on_load } from "../../../globals/contexts/CrimeBranchContext";
 import { mainDataArrestPeopleState, mainDataArrestPersentState, mainDataArrestState, mainDataOccurrenceState } from "../../state/crime_branch/main/MainDataState";
 import { total_branch_state } from "../../state/global/SelectorState";
 import { subDataSubjectState } from "../../state/crime_branch/sub/SubDataState";

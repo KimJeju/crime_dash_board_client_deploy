@@ -1,7 +1,7 @@
 
 import { IPieChartData } from "../../../interfaces/IChartModel";
-import { chart_data_columns_to_array, chart_data_to_array } from "../../../utils/ChartDataUtil";
-import { PieChart } from "@mui/x-charts";
+import { chart_data_columns_to_array, chart_data_to_array } from "../../../../globals/utils/ChartDataUtil";
+import { PieChart, pieArcClasses } from "@mui/x-charts";
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { IArgumentType } from "../../../interfaces/IPropsModel";
@@ -57,8 +57,17 @@ export default function MainSubjectPieChart({data} : {data : IArgumentType}) {
             ],
             highlightScope: { faded: 'global', highlighted: 'item' },
             faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+            
           },
         ]}
+        sx={{
+          [`& .${pieArcClasses.root}`]: {
+            fill: 'white',
+            fontSize: 14,
+            display : "flex",
+            justifyContent : "space-around"
+          },
+        }}
         width={580}
         height={200}
       />

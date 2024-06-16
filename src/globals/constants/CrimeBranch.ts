@@ -1,4 +1,4 @@
-import { ICrimeBranchMainTransitionSeleted, ICrimeBranchSelected, ICrimeBranchSubSubjectSeleted } from "../interfaces/ISelectBoxModel";
+import { ICrimeBranchMainTransitionSeleted, ICrimeBranchSelected, ICrimeBranchSubSubjectSeleted } from "../../web_clinet/interfaces/ISelectBoxModel"
 
 export const crime_branch_selector_value : Array<ICrimeBranchSelected> = [
     { label : "2024년 1분기 범죄발생 통계", year: 2024, branch : 1},

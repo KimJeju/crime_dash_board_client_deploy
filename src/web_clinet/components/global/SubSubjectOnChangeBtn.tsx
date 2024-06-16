@@ -1,6 +1,6 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 import { sub_subject, total_branch_state } from "../../state/global/SelectorState";
-import { get_dynamic_subject_data } from "../../contexts/CrimeBranchContext";
+import { get_dynamic_subject_data } from "../../../globals/contexts/CrimeBranchContext";
 import { Button } from "@mui/material";
 import { subDataSubjectState } from "../../state/crime_branch/sub/SubDataState";
 

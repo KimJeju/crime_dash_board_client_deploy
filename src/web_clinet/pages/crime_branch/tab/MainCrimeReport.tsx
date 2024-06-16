@@ -3,7 +3,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { makeStyles } from "tss-react/mui";
 import { IArgumentType } from "../../../interfaces/IPropsModel";
 import { mainDataArrestPeopleState, mainDataArrestPersentState, mainDataArrestState, mainDataOccurrenceState, mainDataTrainsitionSubjectCaterozieState, } from "../../../state/crime_branch/main/MainDataState";
-import { default_main_data_on_load, } from "../../../contexts/CrimeBranchContext";
+import { default_main_data_on_load, } from "../../../../globals/contexts/CrimeBranchContext";
 import { useMemo } from "react";
 import MainSubjectPieChart from "../../../components/data_chart/main_crime/MainSubjectPieChart";
 import { MainTreeMap } from "../../../components/data_chart/main_crime/MainTreeMap";

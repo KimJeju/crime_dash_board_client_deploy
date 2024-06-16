@@ -1,12 +1,12 @@
 import { makeStyles } from "tss-react/mui";
 import { Grid, Typography } from "@mui/material";
 import { IArgumentType } from "../../../interfaces/IPropsModel";
-import { chart_data_columns_to_array, chart_data_to_array, line_chart_data_slice } from "../../../utils/ChartDataUtil";
+import { chart_data_columns_to_array, chart_data_to_array, line_chart_data_slice } from "../../../../globals/utils/ChartDataUtil";
 import { ILineChartData, IMainTransitionChartData } from "../../../interfaces/IChartModel";
 import { LineChart } from "@mui/x-charts";
 import { MainTransitionOnChangeBtn } from "../../global/MainTransitionOnChangeBtn";
-import { crime_branch_main_transition_value } from "../../../constants/CrimeBranch";
 import { MainTransitionSelector } from "../../selectors/MainTransitionSelector";
+import { crime_branch_main_transition_value } from "../../../../globals/constants/CrimeBranch";
 const useStyles = makeStyles()(() => {
     return {
         root: {

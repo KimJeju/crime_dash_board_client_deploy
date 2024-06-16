@@ -4,8 +4,8 @@ import styled from "styled-components";
 import CrimeBranchTap from "./CrimeBranchTap";
 import SideNav from "../../components/global/SideNav";
 import BranchOnChangeBtn from "../../components/global/BranchOnChangeBtn";
-import { crime_branch_selector_value } from "../../constants/CrimeBranch";
 import { TotalBranchSelector } from "../../components/selectors/TotalBranchSelector";
+import { crime_branch_selector_value } from "../../../globals/constants/CrimeBranch";
 
 
 const Container = styled.div`

@@ -4,7 +4,7 @@ import { makeStyles } from "tss-react/mui";
 import { arrestAverageState, occurrencesAverageState } from "../../../state/crime_branch/total/SubjectAverageState";
 import { dynamicSubCategoryState } from "../../../state/crime_branch/total/DynamicSubjectState";
 import { useMemo, useState } from "react";
-import { default_data_on_load} from "../../../contexts/CrimeBranchContext";
+import { default_data_on_load} from "../../../../globals/contexts/CrimeBranchContext";
 import { crimeBranchTransitionState, totalCrimebranchState } from "../../../state/crime_branch/total/CrimeBranchState";
 import { IArgumentType } from "../../../interfaces/IPropsModel";
 
