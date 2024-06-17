@@ -2,7 +2,7 @@ import { ResponsiveCirclePackingCanvas } from '@nivo/circle-packing'
 import { get_swarm_chart_data_key_pair_value } from '../../../../globals/utils/ChartDataUtil'
 import { Grid, Typography } from '@mui/material'
 import { makeStyles } from 'tss-react/mui'
-import { IArgumentType } from '../../../interfaces/IPropsModel'
+import { IArgumentType } from '../../../../globals/interfaces/IPropsModel'
 
 const useStyles = makeStyles()(() => {
     return {

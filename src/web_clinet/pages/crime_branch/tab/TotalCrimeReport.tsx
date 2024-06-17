@@ -6,7 +6,7 @@ import { dynamicSubCategoryState } from "../../../state/crime_branch/total/Dynam
 import { useMemo, useState } from "react";
 import { default_data_on_load} from "../../../../globals/contexts/CrimeBranchContext";
 import { crimeBranchTransitionState, totalCrimebranchState } from "../../../state/crime_branch/total/CrimeBranchState";
-import { IArgumentType } from "../../../interfaces/IPropsModel";
+import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
 
 //components
 import SingDataBox from "../../../components/SingleDataBox";

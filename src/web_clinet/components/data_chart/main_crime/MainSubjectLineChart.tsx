@@ -1,8 +1,8 @@
 import { makeStyles } from "tss-react/mui";
 import { Grid, Typography } from "@mui/material";
-import { IArgumentType } from "../../../interfaces/IPropsModel";
+import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
 import { chart_data_columns_to_array, chart_data_to_array, line_chart_data_slice } from "../../../../globals/utils/ChartDataUtil";
-import { ILineChartData, IMainTransitionChartData } from "../../../interfaces/IChartModel";
+import { ILineChartData, IMainTransitionChartData } from "../../../../globals/interfaces/IChartModel";
 import { LineChart } from "@mui/x-charts";
 import { MainTransitionOnChangeBtn } from "../../global/MainTransitionOnChangeBtn";
 import { MainTransitionSelector } from "../../../../globals/Componenets/selectors/MainTransitionSelector";

@@ -1,6 +1,6 @@
 import { BarChart } from '@mui/x-charts/BarChart';
-import { IArgumentType } from '../../../interfaces/IPropsModel';
-import { IHorizontalBarData, IHorizontalBarDataList } from '../../../interfaces/IChartModel';
+import { IArgumentType } from '../../../../globals/interfaces/IPropsModel';
+import { IHorizontalBarData, IHorizontalBarDataList } from '../../../../globals/interfaces/IChartModel';
 import { Box } from '@mui/material';
 import { axisClasses } from '@mui/x-charts';
 

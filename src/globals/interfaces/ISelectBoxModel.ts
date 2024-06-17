@@ -12,6 +12,14 @@ export interface ICrimeBranchMainTransitionSeleted extends CommonSeleted{
     subject : string,
 }
 
+export interface ICrimeBranchAvgSubjectSeleted extends CommonSeleted {
+    year : number,
+    branch : number,
+    category : string,
+    subject : string
+}
+
+
 export interface ICrimeBranchSubSubjectSeleted extends CommonSeleted {
     branch : number,
     category : string,

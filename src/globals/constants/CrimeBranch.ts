@@ -1,4 +1,4 @@
-import { ICrimeBranchMainTransitionSeleted, ICrimeBranchSelected, ICrimeBranchSubSubjectSeleted } from "../../web_clinet/interfaces/ISelectBoxModel"
+import { ICrimeBranchAvgSubjectSeleted, ICrimeBranchMainTransitionSeleted, ICrimeBranchSelected, ICrimeBranchSubSubjectSeleted } from "../interfaces/ISelectBoxModel"
 
 export const crime_branch_selector_value : Array<ICrimeBranchSelected> = [
     { label : "2024년 1분기 범죄발생 통계", year: 2024, branch : 1},
@@ -20,6 +20,14 @@ export const crime_branch_main_transition_value : Array<ICrimeBranchMainTransiti
     { label : "선거범죄", category: "main", subject :"선거범죄"},
     { label : "병역범죄", category: "main", subject :"병역범죄"},
     { label : "기타범죄", category: "main", subject :"기타범죄"},
+]
+
+export const crime_branch_avg_subject_value : Array<ICrimeBranchAvgSubjectSeleted> = [
+    { label : "발생건수" ,year : 2024,branch : 1, category: "average", subject :"발생건수"},
+    { label : "검거건수",year : 2024,branch : 1, category: "average", subject :"검거건수"},
+    { label : "검거인원",year : 2024,branch : 1, category: "average", subject :"검거인원"},
+    { label : "법인체" ,year : 2024,branch : 1, category: "average", subject :"법인체"},
+
 ]
 
 export const crime_branch_sub_subject_value : Array<ICrimeBranchSubSubjectSeleted> = [

@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { makeStyles } from "tss-react/mui";
-import { IArgumentType } from "../../../interfaces/IPropsModel";
+import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
 import { mainDataArrestPeopleState, mainDataArrestPersentState, mainDataArrestState, mainDataOccurrenceState, mainDataTrainsitionSubjectCaterozieState, } from "../../../state/crime_branch/main/MainDataState";
 import { default_main_data_on_load, } from "../../../../globals/contexts/CrimeBranchContext";
 import { useMemo } from "react";

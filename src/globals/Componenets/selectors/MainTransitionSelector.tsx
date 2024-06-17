@@ -1,7 +1,7 @@
 
 import { Autocomplete, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
-import { IArrayProps, IArrayPropsType } from "../../../web_clinet/interfaces/IPropsModel";
+import { IArrayProps, IArrayPropsType } from "../../interfaces/IPropsModel";
 import { useSetRecoilState } from "recoil";
 import { main_transition_state } from "../../../web_clinet/state/global/SelectorState";
 

@@ -1,5 +1,5 @@
 import ApexCharts from "react-apexcharts";
-import { IArgumentType } from "../../../interfaces/IPropsModel";
+import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
 import { get_tree_map_data_set } from "../../../../globals/utils/ChartDataUtil";
 
 import { makeStyles } from "tss-react/mui";

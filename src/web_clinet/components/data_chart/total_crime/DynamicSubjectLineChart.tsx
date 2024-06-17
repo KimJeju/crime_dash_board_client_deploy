@@ -4,7 +4,7 @@ import { Grid, Typography } from "@mui/material";
 import { LineChart } from "@mui/x-charts";
 import { crimeBranchTransitionState } from "../../../state/crime_branch/total/CrimeBranchState";
 import { chart_data_columns_to_array, chart_data_to_array, line_chart_data_slice } from "../../../../globals/utils/ChartDataUtil";
-import { ILineChartData, IMainChartData } from "../../../interfaces/IChartModel";
+import { ILineChartData, IMainChartData } from "../../../../globals/interfaces/IChartModel";
 
 
 const useStyles = makeStyles()(() => {

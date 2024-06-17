@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { makeStyles } from 'tss-react/mui';
-import { IArgumentType } from '../../../web_clinet/interfaces/IPropsModel';
+import { IArgumentType } from '../../../globals/interfaces/IPropsModel';
 import { totalCrimebranchState } from '../../../web_clinet/state/crime_branch/total/CrimeBranchState';
 import { useRecoilValue } from 'recoil';
 // import { dynamicSubCategoryState } from '../../../web_clinet/state/crime_branch/total/DynamicSubjectState';
@@ -9,6 +9,8 @@ import { useRecoilValue } from 'recoil';
 import SingDataBox from '../../../web_clinet/components/SingleDataBox';
 import Container from 'react-bootstrap/esm/Container';
 import Stack from 'react-bootstrap/esm/Stack';
+import { TotalBranchSubjectSelector } from '../../../globals/Componenets/selectors/TotalBranchSubjectSelector';
+import { crime_branch_avg_subject_value } from '../../../globals/constants/CrimeBranch';
 const useStyles = makeStyles()(() => {
   return {
     root: {
@@ -95,8 +97,7 @@ function MobileTotalCrimeBranchSlide() {
         </Container>
       </Carousel.Item>
       <Carousel.Item>
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <TotalBranchSubjectSelector args={crime_branch_avg_subject_value}/>
       </Carousel.Item>
     </Carousel>
   );

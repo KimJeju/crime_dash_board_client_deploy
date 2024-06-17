@@ -1,9 +1,9 @@
 import { BarChart } from '@mui/x-charts/BarChart';
-import { IMainChartData } from "../../../interfaces/IChartModel";
+import { IMainChartData } from "../../../../globals/interfaces/IChartModel";
 import { chart_data_to_array, slice_total_avg_data } from "../../../../globals/utils/ChartDataUtil";
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
-import { IArgumentType } from '../../../interfaces/IPropsModel';
+import { IArgumentType } from '../../../../globals/interfaces/IPropsModel';
 const useStyles = makeStyles()(() => {
     return {
         root: {
