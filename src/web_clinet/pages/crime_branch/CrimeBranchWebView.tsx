@@ -3,7 +3,7 @@ import styled from "styled-components";
 //components
 import CrimeBranchTap from "./CrimeBranchTap";
 import BranchOnChangeBtn from "../../components/global/BranchOnChangeBtn";
-import { TotalBranchSelector } from "../../components/selectors/TotalBranchSelector";
+import { TotalBranchSelector } from "../../../globals/Componenets/selectors/TotalBranchSelector";
 import { crime_branch_selector_value } from "../../../globals/constants/CrimeBranch";
 import { NavBar } from "../../../globals/Componenets/NavBar";
 

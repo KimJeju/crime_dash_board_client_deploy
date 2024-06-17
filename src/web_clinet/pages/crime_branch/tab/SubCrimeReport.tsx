@@ -6,7 +6,7 @@ import { subDataSubjectState } from "../../../state/crime_branch/sub/SubDataStat
 import { useMemo } from "react";
 import { get_dynamic_subject_data } from "../../../../globals/contexts/CrimeBranchContext";
 import { IArgumentType } from "../../../interfaces/IPropsModel";
-import { SubSubjectSelector } from "../../../components/selectors/SubSubjectSelector";
+import { SubSubjectSelector } from "../../../../globals/Componenets/selectors/SubSubjectSelector";
 import { SubSubjectOnChangeBtn } from "../../../components/global/SubSubjectOnChangeBtn";
 import { crime_branch_sub_subject_value } from "../../../../globals/constants/CrimeBranch";
 const useStyle = makeStyles()({
