@@ -11,7 +11,6 @@ import { arrestAverageState, occurrencesAverageState } from "../../web_clinet/st
 import { default_data_on_load } from "../../globals/contexts/CrimeBranchContext";
 import Stack from 'react-bootstrap/Stack';
 import { useMemo, useState } from "react";
-import { Footer } from "../../globals/Componenets/Footer";
 const useStyles = makeStyles()(() => {
     return {
         root: {
