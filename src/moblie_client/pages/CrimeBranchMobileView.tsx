@@ -40,10 +40,10 @@ export function CrimeBranchMobileView() {
 
     const [loading, setLoading] = useState(true);
     const [, setTotalData] = useRecoilState(totalCrimebranchState); // main, sub, average 
-    const [, setBranchTransition] = useRecoilState(crimeBranchTransitionState); // 2023 분기별 범죄 발생추이
-    const [, setSubCrimeData] = useRecoilState(dynamicSubCategoryState); // 소분류데이터
-    const [, setAvgOccurencesData] = useRecoilState(occurrencesAverageState); // 중분류 범죄발생추이
-    const [, setAvgArrestData] = useRecoilState(arrestAverageState); // 중분류 검거건 추이
+    // const [, setBranchTransition] = useRecoilState(crimeBranchTransitionState); // 2023 분기별 범죄 발생추이
+    // const [, setSubCrimeData] = useRecoilState(dynamicSubCategoryState); // 소분류데이터
+    // const [, setAvgOccurencesData] = useRecoilState(occurrencesAverageState); // 중분류 범죄발생추이
+    // const [, setAvgArrestData] = useRecoilState(arrestAverageState); // 중분류 검거건 추이
     // const [subCategoryData, setSubCategoryData] = useRecoilState(dynamicSubCategoryState);
 
     useMemo(() => {
@@ -55,10 +55,10 @@ export function CrimeBranchMobileView() {
                     main: default_data[0].main,
                     sub: default_data[0].sub
                 })
-                setBranchTransition(default_data[1]);
-                setSubCrimeData(default_data[2]);
-                setAvgOccurencesData(default_data[3]);
-                setAvgArrestData(default_data[4]);
+                // setBranchTransition(default_data[1]);
+                // setSubCrimeData(default_data[2]);
+                // setAvgOccurencesData(default_data[3]);
+                // setAvgArrestData(default_data[4]);
             }
             setLoading(false);
         }

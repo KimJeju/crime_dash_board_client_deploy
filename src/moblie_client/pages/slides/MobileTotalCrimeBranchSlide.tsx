@@ -12,10 +12,13 @@ import Stack from 'react-bootstrap/esm/Stack';
 import { TotalBranchSubjectSelector } from '../../../globals/Componenets/selectors/TotalBranchSubjectSelector';
 import { crime_branch_avg_subject_value } from '../../../globals/constants/CrimeBranch';
 import { AvgSubjectOnChangeBtn } from '../../globals/AvgSubjectOnChangeBtn';
+import { mobileCrimeBranchTotalAvgSubjectState } from '../../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState';
+import MobileTotalAverageSubjectPieChart from '../../components/mobile_chart/MobileTotalAverageSubjectPieChart';
+import { Typography } from '@mui/material';
 const useStyles = makeStyles()(() => {
   return {
     root: {
-      width:  "calc(100%)",
+      width: "calc(100%)",
       display: "flex",
       borderRadius: "10px",
       flexDirection: "row",
@@ -28,17 +31,20 @@ const useStyles = makeStyles()(() => {
         boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)"
       }
     },
-    single_data: {
+    chart_title: {
+      display: "flex",
+      alignItems : "center",
+      fontSize: "1.4rem",
+      boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px",
+      fontWeight: "400",
+      height: "50px",
+      padding : "1vw"
+    },
+    chart_layout: {
       display: "flex",
       flexDirection: "column",
       padding: "1%",
     },
-    sigle_data_col: {
-      display: "flex",
-      flexDirection: "column",
-      boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px",
-      padding : "1%",
-    }
   };
 });
 
@@ -56,21 +62,10 @@ function MobileTotalCrimeBranchSlide() {
     args: useRecoilValue(totalCrimebranchState)
   }
 
-  // const sub_catetory_args : IArgumentType = {
-  //     key : "소분류 범죄 발생비율 (%)",
-  //     args : useRecoilValue(dynamicSubCategoryState)
-  // }
-
-  // const occucrrences_args : IArgumentType = {
-  //     key : "대분류 범죄 발생건수 (건)",
-  //     args : useRecoilValue(occurrencesAverageState)
-  // } 
-
-  // const arrest_args : IArgumentType = {
-  //     key : "대분류 범죄 검거건수 (건)",
-  //     args : useRecoilValue(arrestAverageState)
-  // } 
-
+  const mobile_total_avg_catetory_args: IArgumentType = {
+    key: "세부 항목별 총계",
+    args: useRecoilValue(mobileCrimeBranchTotalAvgSubjectState)
+  }
   return (
     <Carousel
       activeIndex={index}
@@ -79,11 +74,11 @@ function MobileTotalCrimeBranchSlide() {
       // touch={true}
       controls={false}
       data-bs-theme="dark"
-    interval={null}
-    style={{
-      height : "630px",
-      marginBottom : "3%",
-    }}
+      interval={null}
+      style={{
+        height: "630px",
+        marginBottom: "3%",
+      }}
     >
       <Carousel.Item >
         <Container>
@@ -91,15 +86,25 @@ function MobileTotalCrimeBranchSlide() {
             {
 
               Object.entries(total_data_args.args.average["총 계"]).map((el, index) => (
-                <SingDataBox key={index} data={el[1] as string} avg_title={el[0]}/>
+                <SingDataBox key={index} data={el[1] as string} avg_title={el[0]} />
               ))
             }
           </Stack>
         </Container>
       </Carousel.Item>
       <Carousel.Item>
-        <TotalBranchSubjectSelector args={crime_branch_avg_subject_value}/>
-        <AvgSubjectOnChangeBtn />
+        <Container>
+          <Stack className={classes.chart_layout}>
+            <div className={classes.chart_title}>세부항목 별 총계</div>
+            <br />
+            <TotalBranchSubjectSelector args={crime_branch_avg_subject_value} />
+            <br />
+            <AvgSubjectOnChangeBtn />
+            <br />
+            <MobileTotalAverageSubjectPieChart data={mobile_total_avg_catetory_args} />
+            <br />
+          </Stack>
+        </Container>
       </Carousel.Item>
     </Carousel>
   );

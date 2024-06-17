@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import MobileTotalCrimeBranchSlide from '../components/slides/MobileTotalCrimeBranchSlide';
+import MobileTotalCrimeBranchSlide from './slides/MobileTotalCrimeBranchSlide';
 
 export function CrimeBranchMobileTap() {
   return (
