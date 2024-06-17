@@ -4,8 +4,8 @@ import { makeStyles } from 'tss-react/mui';
 import { IArgumentType } from '../../../web_clinet/interfaces/IPropsModel';
 import { totalCrimebranchState } from '../../../web_clinet/state/crime_branch/total/CrimeBranchState';
 import { useRecoilValue } from 'recoil';
-import { dynamicSubCategoryState } from '../../../web_clinet/state/crime_branch/total/DynamicSubjectState';
-import { arrestAverageState, occurrencesAverageState } from '../../../web_clinet/state/crime_branch/total/SubjectAverageState';
+// import { dynamicSubCategoryState } from '../../../web_clinet/state/crime_branch/total/DynamicSubjectState';
+// import { arrestAverageState, occurrencesAverageState } from '../../../web_clinet/state/crime_branch/total/SubjectAverageState';
 import SingDataBox from '../../../web_clinet/components/SingleDataBox';
 const useStyles = makeStyles()(() => {
   return {
@@ -47,20 +47,20 @@ function MobileTotalCrimeBranchSlide() {
       args : useRecoilValue(totalCrimebranchState)
   }
 
-  const sub_catetory_args : IArgumentType = {
-      key : "소분류 범죄 발생비율 (%)",
-      args : useRecoilValue(dynamicSubCategoryState)
-  }
+  // const sub_catetory_args : IArgumentType = {
+  //     key : "소분류 범죄 발생비율 (%)",
+  //     args : useRecoilValue(dynamicSubCategoryState)
+  // }
 
-  const occucrrences_args : IArgumentType = {
-      key : "대분류 범죄 발생건수 (건)",
-      args : useRecoilValue(occurrencesAverageState)
-  } 
+  // const occucrrences_args : IArgumentType = {
+  //     key : "대분류 범죄 발생건수 (건)",
+  //     args : useRecoilValue(occurrencesAverageState)
+  // } 
 
-  const arrest_args : IArgumentType = {
-      key : "대분류 범죄 검거건수 (건)",
-      args : useRecoilValue(arrestAverageState)
-  } 
+  // const arrest_args : IArgumentType = {
+  //     key : "대분류 범죄 검거건수 (건)",
+  //     args : useRecoilValue(arrestAverageState)
+  // } 
 
   return (
     <Carousel
