@@ -1,6 +1,6 @@
 
 import { PieChart } from "@mui/x-charts";
-import { Grid, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { IArgumentType } from "../../../globals/interfaces/IPropsModel";
 import { IPieChartData } from "../../../globals/interfaces/IChartModel";
