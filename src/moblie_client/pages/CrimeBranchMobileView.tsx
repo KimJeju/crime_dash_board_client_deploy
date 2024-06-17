@@ -11,14 +11,20 @@ import { arrestAverageState, occurrencesAverageState } from "../../web_clinet/st
 import { default_data_on_load } from "../../globals/contexts/CrimeBranchContext";
 import Stack from 'react-bootstrap/Stack';
 import { useMemo, useState } from "react";
+import BranchOnChangeBtn from "../../web_clinet/components/global/BranchOnChangeBtn";
 const useStyles = makeStyles()(() => {
     return {
+        warpper: {
+            display: "flex",
+            flexDirection: "column",
+        },
         root: {
             display: "flex",
             alignItems: "left",
             flexDirection: "column",
-            height: "calc(100% - 100px)",
-            padding: "3vw"
+            height: "calc(100% - 150px)",
+            padding: "3vw",
+            marginBottom: "30vh"
         },
     };
 });
@@ -66,15 +72,20 @@ export function CrimeBranchMobileView() {
         )
     } else {
         return (
-            <>
+            <div className={classes.warpper}>
                 <NavBar link_list={link_list} />
                 <Container className={classes.root}>
                     <Stack gap={2}>
+                        <div>
                         <TotalBranchSelector args={crime_branch_selector_value} />
+                        <br />
+                        <BranchOnChangeBtn />
+                        </div>
                         <CrimeBranchMobileTap />
                     </Stack>
                 </Container>
-            </>)
+            </div>
+        )
     }
 
 }

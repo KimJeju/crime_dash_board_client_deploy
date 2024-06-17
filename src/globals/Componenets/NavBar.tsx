@@ -16,7 +16,7 @@ export function NavBar({link_list}: {link_list:Array<string>}){
     const { classes } = useStyles();
 
     return(
-        <Navbar expand="lg" className={classes.root}>
+        <Navbar expand="lg" className={classes.root} >
         <Container className="bg-body-tertiary">
           <Navbar.Brand href="/">국내 범죄통계</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
