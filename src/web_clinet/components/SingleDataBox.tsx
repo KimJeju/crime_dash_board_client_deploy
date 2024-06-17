@@ -5,11 +5,12 @@ import { makeStyles } from 'tss-react/mui';
 const useStyles = makeStyles()(() => {
     return {
         root: {
-            padding: "15px",
+            padding: "10px",
             marginLeft: "1vw",
             boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
             borderRadius: "1rem",
             transition: "0.5s",
+            marginBottom : "10px",
             '&:hover': {
                 backgroundColor: "white",
                 boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px"
