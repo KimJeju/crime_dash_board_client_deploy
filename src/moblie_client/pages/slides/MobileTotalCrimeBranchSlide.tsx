@@ -14,7 +14,6 @@ import { crime_branch_avg_subject_value } from '../../../globals/constants/Crime
 import { AvgSubjectOnChangeBtn } from '../../globals/AvgSubjectOnChangeBtn';
 import { mobileCrimeBranchTotalAvgSubjectState } from '../../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState';
 import MobileTotalAverageSubjectPieChart from '../../components/mobile_chart/MobileTotalAverageSubjectPieChart';
-import { Typography } from '@mui/material';
 const useStyles = makeStyles()(() => {
   return {
     root: {

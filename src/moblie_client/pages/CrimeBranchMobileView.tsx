@@ -5,13 +5,14 @@ import { TotalBranchSelector } from "../../globals/Componenets/selectors/TotalBr
 import { crime_branch_selector_value } from "../../globals/constants/CrimeBranch";
 import { CrimeBranchMobileTap } from "./CrimeBranchMobileTap";
 import { useRecoilState } from "recoil";
-import { crimeBranchTransitionState, totalCrimebranchState } from "../../web_clinet/state/crime_branch/total/CrimeBranchState";
-import { dynamicSubCategoryState } from "../../web_clinet/state/crime_branch/total/DynamicSubjectState";
-import { arrestAverageState, occurrencesAverageState } from "../../web_clinet/state/crime_branch/total/SubjectAverageState";
-import { default_data_on_load } from "../../globals/contexts/CrimeBranchContext";
+import { totalCrimebranchState } from "../../web_clinet/state/crime_branch/total/CrimeBranchState";
+// import { dynamicSubCategoryState } from "../../web_clinet/state/crime_branch/total/DynamicSubjectState";
+// import { arrestAverageState, occurrencesAverageState } from "../../web_clinet/state/crime_branch/total/SubjectAverageState";
+import { default_data_on_load, get_dynamic_subject_data } from "../../globals/contexts/CrimeBranchContext";
 import Stack from 'react-bootstrap/Stack';
 import { useMemo, useState } from "react";
 import BranchOnChangeBtn from "../../web_clinet/components/global/BranchOnChangeBtn";
+import { mobileCrimeBranchTotalAvgSubjectState } from "../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState";
 const useStyles = makeStyles()(() => {
     return {
         warpper: {
@@ -40,6 +41,8 @@ export function CrimeBranchMobileView() {
 
     const [loading, setLoading] = useState(true);
     const [, setTotalData] = useRecoilState(totalCrimebranchState); // main, sub, average 
+    const [, setMobileTotalAvgData] = useRecoilState(mobileCrimeBranchTotalAvgSubjectState); // main, sub, average 
+
     // const [, setBranchTransition] = useRecoilState(crimeBranchTransitionState); // 2023 분기별 범죄 발생추이
     // const [, setSubCrimeData] = useRecoilState(dynamicSubCategoryState); // 소분류데이터
     // const [, setAvgOccurencesData] = useRecoilState(occurrencesAverageState); // 중분류 범죄발생추이
@@ -59,6 +62,11 @@ export function CrimeBranchMobileView() {
                 // setSubCrimeData(default_data[2]);
                 // setAvgOccurencesData(default_data[3]);
                 // setAvgArrestData(default_data[4]);
+            }
+
+            const default_mobile_pie_data = await get_dynamic_subject_data("2024", 1,"average", "발생건수")
+            if(default_mobile_pie_data != undefined){
+                setMobileTotalAvgData(default_mobile_pie_data)
             }
             setLoading(false);
         }
