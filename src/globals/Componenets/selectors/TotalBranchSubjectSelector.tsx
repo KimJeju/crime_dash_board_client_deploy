@@ -18,8 +18,6 @@ export const TotalBranchSubjectSelector = <T extends IArrayPropsType>({ args }: 
     }
   }, [value])
 
-  console.log(value)
-
   return (
     <div style={{marginTop :"5px"}}>
       <Autocomplete

@@ -11,6 +11,7 @@ import Container from 'react-bootstrap/esm/Container';
 import Stack from 'react-bootstrap/esm/Stack';
 import { TotalBranchSubjectSelector } from '../../../globals/Componenets/selectors/TotalBranchSubjectSelector';
 import { crime_branch_avg_subject_value } from '../../../globals/constants/CrimeBranch';
+import { AvgSubjectOnChangeBtn } from '../../globals/AvgSubjectOnChangeBtn';
 const useStyles = makeStyles()(() => {
   return {
     root: {
@@ -98,6 +99,7 @@ function MobileTotalCrimeBranchSlide() {
       </Carousel.Item>
       <Carousel.Item>
         <TotalBranchSubjectSelector args={crime_branch_avg_subject_value}/>
+        <AvgSubjectOnChangeBtn />
       </Carousel.Item>
     </Carousel>
   );
