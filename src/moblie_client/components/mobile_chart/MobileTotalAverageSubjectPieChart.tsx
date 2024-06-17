@@ -21,6 +21,15 @@ const useStyles = makeStyles()(() => {
 
       }
     },
+    coloum_box: {
+      display: "flex",
+      flexDirection: "row",
+      fontSize: "0.8rem"
+    },
+    title: {
+      display: "flex",
+      flexDirection: "row"
+    }
   };
 });
 
@@ -35,16 +44,16 @@ export default function MobileTotalAverageSubjectPieChart({ data }: { data: IArg
   const column_array = chart_data_columns_to_array(data.args);
 
   return (
-    <Grid item xs={5.8} className={classes.root}>
+    <div className={classes.root}>
       <Typography>{data.key}</Typography>
       <PieChart
         series={[
           {
             data: [
-              { id: 0, value: pie_data.AverageSubject[0], label: column_array[0] },
-              { id: 1, value: pie_data.AverageSubject[1], label: column_array[1] },
-              { id: 2, value: pie_data.AverageSubject[2], label: column_array[2] },
-              { id: 3, value: pie_data.AverageSubject[3], label: column_array[3] },
+              { id: 0, value: pie_data.AverageSubject[0], },
+              { id: 1, value: pie_data.AverageSubject[1], },
+              { id: 2, value: pie_data.AverageSubject[2], },
+              { id: 3, value: pie_data.AverageSubject[3], },
             ],
             highlightScope: { faded: 'global', highlighted: 'item' },
           },
@@ -61,6 +70,12 @@ export default function MobileTotalAverageSubjectPieChart({ data }: { data: IArg
         width={550}
         height={300}
       />
-    </Grid>
+      <div className={classes.coloum_box}>
+        <p className={classes.title}><div style={{ backgroundColor: "#05B1AF", width: "20px", height: "20px", marginRight: "2px" }} />{column_array[0]}</p> &nbsp;
+        <p className={classes.title}><div style={{ backgroundColor: "#2D96FE", width: "20px", height: "20px", marginRight: "2px" }} />{column_array[1]}</p>  &nbsp;
+        <p className={classes.title}><div style={{ backgroundColor: "#B800D7", width: "20px", height: "20px", marginRight: "2px" }} />{column_array[2]}</p>  &nbsp;
+        <p className={classes.title}><div style={{ backgroundColor: "#5F019B", width: "20px", height: "20px", marginRight: "2px" }} />{column_array[3]}</p>  
+      </div>
+    </div>
   )
 }
