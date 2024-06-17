@@ -17,14 +17,14 @@ const useStyles = makeStyles()(() => {
             }
         },
         title: {
-            fontSize: "1.2rem",
+            fontSize: "1.0rem",
             fontWeight: "bold"
         },
         content: {
-            fontSize: "1.6rem",
+            fontSize: "1.0rem",
             transition: "0.5s",
             '&:hover': {
-                fontSize: "2.2rem"
+                fontSize: "1.6rem"
             }
         }
 

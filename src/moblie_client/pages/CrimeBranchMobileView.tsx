@@ -9,7 +9,9 @@ import { crimeBranchTransitionState, totalCrimebranchState } from "../../web_cli
 import { dynamicSubCategoryState } from "../../web_clinet/state/crime_branch/total/DynamicSubjectState";
 import { arrestAverageState, occurrencesAverageState } from "../../web_clinet/state/crime_branch/total/SubjectAverageState";
 import { default_data_on_load } from "../../globals/contexts/CrimeBranchContext";
+import Stack from 'react-bootstrap/Stack';
 import { useMemo, useState } from "react";
+import { Footer } from "../../globals/Componenets/Footer";
 const useStyles = makeStyles()(() => {
     return {
         root: {
@@ -68,8 +70,10 @@ export function CrimeBranchMobileView() {
             <>
                 <NavBar link_list={link_list} />
                 <Container className={classes.root}>
-                    <TotalBranchSelector args={crime_branch_selector_value} />
-                    <CrimeBranchMobileTap />
+                    <Stack gap={2}>
+                        <TotalBranchSelector args={crime_branch_selector_value} />
+                        <CrimeBranchMobileTap />
+                    </Stack>
                 </Container>
             </>)
     }

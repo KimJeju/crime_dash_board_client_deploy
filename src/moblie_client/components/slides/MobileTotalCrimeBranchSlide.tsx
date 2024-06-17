@@ -7,11 +7,12 @@ import { useRecoilValue } from 'recoil';
 // import { dynamicSubCategoryState } from '../../../web_clinet/state/crime_branch/total/DynamicSubjectState';
 // import { arrestAverageState, occurrencesAverageState } from '../../../web_clinet/state/crime_branch/total/SubjectAverageState';
 import SingDataBox from '../../../web_clinet/components/SingleDataBox';
+import Container from 'react-bootstrap/esm/Container';
+import Stack from 'react-bootstrap/esm/Stack';
 const useStyles = makeStyles()(() => {
   return {
     root: {
-      height: "calc(100%)",
-      width: "calc(100%)",
+      width:  "calc(100%)",
       display: "flex",
       borderRadius: "10px",
       flexDirection: "row",
@@ -24,11 +25,16 @@ const useStyles = makeStyles()(() => {
         boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)"
       }
     },
-    single_data : {
-      display : "flex",
-      flexDirection : "column",
-      padding : "1%"
-
+    single_data: {
+      display: "flex",
+      flexDirection: "column",
+      padding: "1%",
+    },
+    sigle_data_col: {
+      display: "flex",
+      flexDirection: "column",
+      boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px",
+      padding : "1%",
     }
   };
 });
@@ -41,10 +47,10 @@ function MobileTotalCrimeBranchSlide() {
     setIndex(selectedIndex);
   };
 
-     //즉각적인 데이터 변동이 어려운 차트에 대하여 값을 직접 대입해준다.
-     const total_data_args : IArgumentType = {
-      key : "종합 총계",
-      args : useRecoilValue(totalCrimebranchState)
+  //즉각적인 데이터 변동이 어려운 차트에 대하여 값을 직접 대입해준다.
+  const total_data_args: IArgumentType = {
+    key: "종합 총계",
+    args: useRecoilValue(totalCrimebranchState)
   }
 
   // const sub_catetory_args : IArgumentType = {
@@ -67,17 +73,26 @@ function MobileTotalCrimeBranchSlide() {
       activeIndex={index}
       onSelect={handleSelect}
       className={classes.root}
-      touch={true}
+      // touch={true}
       controls={false}
       data-bs-theme="dark"
-      interval={null}
+    interval={null}
+    style={{
+      height : "630px",
+      marginBottom : "3%",
+    }}
     >
-      <Carousel.Item className={classes.single_data}>
-        {
-          Object.entries(total_data_args.args.average["총 계"]).map((el, index) => (
-            <SingDataBox key={index} data={el[1] as string} avg_title={el[0]} />
-          ))
-        }
+      <Carousel.Item >
+        <Container>
+          <Stack>
+            {
+
+              Object.entries(total_data_args.args.average["총 계"]).map((el, index) => (
+                <SingDataBox key={index} data={el[1] as string} avg_title={el[0]}/>
+              ))
+            }
+          </Stack>
+        </Container>
       </Carousel.Item>
       <Carousel.Item>
         <h3>Second slide label</h3>
