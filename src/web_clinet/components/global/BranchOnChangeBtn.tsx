@@ -7,6 +7,8 @@ import { select_main_data_on_load, select_sub_data_on_load, seleted_data_on_load
 import { mainDataArrestPeopleState, mainDataArrestPersentState, mainDataArrestState, mainDataOccurrenceState } from "../../state/crime_branch/main/MainDataState";
 import { total_branch_state } from "../../state/global/SelectorState";
 import { subDataSubjectState } from "../../state/crime_branch/sub/SubDataState";
+import { mobileCrimeBranchTotalAvgSubjectState } from "../../../moblie_client/state/mobile_crime_branch/mobile_total/MobileTotalCrimeState";
+import { get_dynamic_subject_data } from "../../contexts/CrimeBranchContext";
 
 export default function BranchOnChangeBtn() {
 
@@ -15,10 +17,10 @@ export default function BranchOnChangeBtn() {
     const seletected_value = useRecoilValue(total_branch_state(selector_key));
 
     //총계
-    const [,setTotalData] = useRecoilState(totalCrimebranchState);
-    const [,setSubCrimeData] = useRecoilState(dynamicSubCategoryState);
-    const [,setAvgOccurencesData] = useRecoilState(occurrencesAverageState);
-    const [,setAvgArrestData] = useRecoilState(arrestAverageState);
+    const [, setTotalData] = useRecoilState(totalCrimebranchState);
+    const [, setSubCrimeData] = useRecoilState(dynamicSubCategoryState);
+    const [, setAvgOccurencesData] = useRecoilState(occurrencesAverageState);
+    const [, setAvgArrestData] = useRecoilState(arrestAverageState);
 
     //대분류
     const [, setMainOccurenceData] = useRecoilState(mainDataOccurrenceState); // 중분류 범죄발생추이
@@ -29,15 +31,17 @@ export default function BranchOnChangeBtn() {
     //소분류
     const [, setSubDataSubject] = useRecoilState(subDataSubjectState);
 
+    //---------------- 모바일 ---------------//
+    const [, setMobileTotalAvgData] = useRecoilState(mobileCrimeBranchTotalAvgSubjectState); // main, sub, average 
+
     async function onChangeCrimeBranch() {
         try {
 
             const seleted_total_data = await seleted_data_on_load(seletected_value.year.toString(), seletected_value.branch, "average");
             const seleted_main_data = await select_main_data_on_load(seletected_value.year.toString(), seletected_value.branch, "main");
-            const seleted_sub_data = await select_sub_data_on_load(seletected_value.year.toString(),seletected_value.branch, "sub");
+            const seleted_sub_data = await select_sub_data_on_load(seletected_value.year.toString(), seletected_value.branch, "sub");
 
             if (seleted_total_data != undefined && seleted_main_data != undefined) {
-                
                 //총계
                 setTotalData({
                     average: seleted_total_data[0].average,
@@ -58,6 +62,11 @@ export default function BranchOnChangeBtn() {
                 setSubDataSubject(seleted_sub_data)
             }
 
+            //---------------- 모바일 ---------------//
+            const default_mobile_pie_data = await get_dynamic_subject_data(seletected_value.year.toString(), seletected_value.branch, "average", "발생건수")
+            if (default_mobile_pie_data != undefined) {
+                setMobileTotalAvgData(default_mobile_pie_data)
+            }
         } catch (error) {
             console.log(error);
             return;
@@ -65,7 +74,7 @@ export default function BranchOnChangeBtn() {
     }
 
     return (
-        <Button variant="contained" style={{ width : "calc(25%)"}}
+        <Button variant="contained" style={{ width: "calc(25%)" }}
             onClick={() => {
                 onChangeCrimeBranch();
             }}>검색</Button>
