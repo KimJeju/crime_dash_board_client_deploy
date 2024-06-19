@@ -1,60 +1,39 @@
-# 프로젝트 이름
-
-<p align="center">
-  <br>
-  <img src="./images/common/logo-sample.jpeg">
-  <br>
-</p>
+# 국내범죄통계 대시보드 클라이언트
 
 목차
 
 ## 프로젝트 소개
 
 <p align="justify">
-프로젝트 개요/동기
-</p>
-
-<p align="center">
-GIF Images
+## 프로젝트 개요
+■ 국내 범죄동향 및 통계를 시각화 자료로 표현하기 위한 웹앱 입니다.
 </p>
 
 <br>
 
 ## 기술 스택
 
-| JavaScript | TypeScript |  React   |  Node   |
-| :--------: | :--------: | :------: | :-----: |
-|   ![js]    |   ![ts]    | ![react] | ![node] |
-
+| TypeScript | React | 
+| :--------: | :--------: |
 <br>
+
+<img width="1915" alt="스크린샷 2024-06-19 오후 5 23 13" src="https://github.com/KimJeju/crime_dash_board_client_deploy/assets/80661467/732acc78-b5a3-4695-9b5b-0623119806af">
 
 ## 구현 기능
 
 ### 기능 1
+■ 분기별 범죄통계 자료
 
 ### 기능 2
+■ 분기별 범죄통계 자료 상세 
 
 ### 기능 3
+■ 분기별 발생추이 상세 통계
 
 ### 기능 4
+■ 주제에 따른 통계
+
 
 <br>
 
-## 배운 점 & 아쉬운 점
 
-<p align="justify">
-
-</p>
-
-<br>
-
-## 라이센스
-
-MIT &copy; [NoHack](mailto:lbjp114@gmail.com)
-
-<!-- Stack Icon Refernces -->
-
-[js]: /images/stack/javascript.svg
-[ts]: /images/stack/typescript.svg
-[react]: /images/stack/react.svg
-[node]: /images/stack/node.svg
