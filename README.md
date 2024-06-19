@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
+# 프로젝트 이름
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <br>
+  <img src="./images/common/logo-sample.jpeg">
+  <br>
+</p>
 
-Currently, two official plugins are available:
+목차
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 프로젝트 소개
 
-## Expanding the ESLint configuration
+<p align="justify">
+프로젝트 개요/동기
+</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<p align="center">
+GIF Images
+</p>
 
-- Configure the top-level `parserOptions` property like this:
+<br>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## 기술 스택
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+| JavaScript | TypeScript |  React   |  Node   |
+| :--------: | :--------: | :------: | :-----: |
+|   ![js]    |   ![ts]    | ![react] | ![node] |
+
+<br>
+
+## 구현 기능
+
+### 기능 1
+
+### 기능 2
+
+### 기능 3
+
+### 기능 4
+
+<br>
+
+## 배운 점 & 아쉬운 점
+
+<p align="justify">
+
+</p>
+
+<br>
+
+## 라이센스
+
+MIT &copy; [NoHack](mailto:lbjp114@gmail.com)
+
+<!-- Stack Icon Refernces -->
+
+[js]: /images/stack/javascript.svg
+[ts]: /images/stack/typescript.svg
+[react]: /images/stack/react.svg
+[node]: /images/stack/node.svg

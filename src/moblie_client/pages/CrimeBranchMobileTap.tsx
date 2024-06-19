@@ -10,14 +10,14 @@ export function CrimeBranchMobileTap() {
       className="mb-3"
       style={{ marginTop: "10px" }}
     >
-      <Tab eventKey="total" title="총계" defaultChecked={true} style={{ width: "calc(100%)", height : "calc(100vh - 300px)"}}>
+      <Tab eventKey="total" title="총계" defaultChecked={true} style={{ width: "calc(100%)", height: "calc(100vh - 300px)" }}>
         <MobileTotalCrimeBranchSlide />
       </Tab>
       <Tab eventKey="main" title="대분류">
-        2
+        개발 중 입니다.
       </Tab>
       <Tab eventKey="sub" title="소분류">
-        3
+        개발 중 입니다.
       </Tab>
     </Tabs>
   );
