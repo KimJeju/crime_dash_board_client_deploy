@@ -62,11 +62,10 @@ export default function MobileToTalCrimeBarCharts({ data }: { data: IArgumentTyp
                     { data: ChartData.ForceCrime },
                     { data: ChartData.MoralCrime },
                 ]}
-                // width={850}
                 height={330}
                 layout="vertical"
                 grid={{ vertical: true }}
-                margin={{ left : 100}}
+                margin={{ left : 60}}
             />
         </Grid>
     )
