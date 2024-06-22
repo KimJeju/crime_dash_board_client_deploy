@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil"
 import { makeStyles } from "tss-react/mui";
 import { Grid, Typography } from "@mui/material";
-import { LineChart } from "@mui/x-charts";
+import { LineChart, axisClasses } from "@mui/x-charts";
 import { crimeBranchTransitionState } from "../../../state/crime_branch/total/CrimeBranchState";
 import { chart_data_columns_to_array, chart_data_to_array, line_chart_data_slice } from "../../../../globals/utils/ChartDataUtil";
 import { ILineChartData, IMainChartData } from "../../../../globals/interfaces/IChartModel";
@@ -52,7 +52,6 @@ export default function DynamicSubjectLineChart() {
         <Grid item xs={12} className={classes.root}>
             <Typography>2023 총계 범죄발생 추이</Typography>
             <LineChart
-                width={700}
                 height={500}
                 series={[
                     { data: chart_data.ViolentCrime, label: '강력범죄', yAxisKey: 'leftAxisId' },
@@ -64,6 +63,13 @@ export default function DynamicSubjectLineChart() {
                 xAxis={[{ scaleType: 'point', data: column_list }]}
                 yAxis={[{ id: 'leftAxisId' }, { id: 'rightAxisId' }]}
                 rightAxis="rightAxisId"
+                sx={{
+                    sx: {
+                        [`.${axisClasses.left} .${axisClasses.label}`]: {
+                          transform: 'translate(-20px, 0)',
+                        },
+                      },
+                }}
             />
         </Grid>)
 }

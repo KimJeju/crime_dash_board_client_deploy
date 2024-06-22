@@ -3,7 +3,7 @@ import { Grid, Typography } from "@mui/material";
 import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
 import { chart_data_columns_to_array, chart_data_to_array, line_chart_data_slice } from "../../../../globals/utils/ChartDataUtil";
 import { ILineChartData, IMainTransitionChartData } from "../../../../globals/interfaces/IChartModel";
-import { LineChart } from "@mui/x-charts";
+import { LineChart, axisClasses } from "@mui/x-charts";
 import { MainTransitionOnChangeBtn } from "../../global/MainTransitionOnChangeBtn";
 import { MainTransitionSelector } from "../../../../globals/Componenets/selectors/MainTransitionSelector";
 import { crime_branch_main_transition_value } from "../../../../globals/constants/CrimeBranch";
@@ -63,7 +63,6 @@ export default function MainSubjectLineChart({data} : {data : IArgumentType}) {
             <MainTransitionOnChangeBtn />
             </div>
             <LineChart
-                width={800}
                 height={450}
                 series={[
                     { data: chart_data.Orrurrence, label: '발생건수', yAxisKey: 'leftAxisId' },
@@ -76,6 +75,13 @@ export default function MainSubjectLineChart({data} : {data : IArgumentType}) {
                 xAxis={[{ scaleType: 'point', data: column_list }]}
                 yAxis={[{ id: 'leftAxisId' }, { id: 'rightAxisId' }]}
                 rightAxis="rightAxisId"
+                sx={{
+                    sx: {
+                        [`.${axisClasses.left} .${axisClasses.label}`]: {
+                          transform: 'translate(-20px, 0)',
+                        },
+                      },
+                }}
             />
         </Grid>)
 }

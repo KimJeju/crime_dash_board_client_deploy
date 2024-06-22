@@ -1,7 +1,7 @@
 
 import { IPieChartData } from "../../../../globals/interfaces/IChartModel";
 import { chart_data_columns_to_array, chart_data_to_array } from "../../../../globals/utils/ChartDataUtil";
-import { PieChart } from "@mui/x-charts";
+import { PieChart, axisClasses } from "@mui/x-charts";
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
@@ -56,19 +56,26 @@ export default function MainSubjectPieChart({data} : {data : IArgumentType}) {
 
             ],
             highlightScope: { faded: 'global', highlighted: 'item' },
-            faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+            type: 'pie',
           },
         ]}
-        slotProps={{
-          legend: {
-            direction: 'column',
-            position: { vertical: 'middle', horizontal: 'right' },
-            padding: 5,
+        // slotProps={{
+        //   legend: {
+        //     direction: 'column',
+        //     position: { vertical: 'middle', horizontal: 'right' },
+        //     padding: 5,
+        //   },
+        // }}
+        height={200}
+        sx={{
+          sx: {
+            [`.${axisClasses.left}, ${axisClasses.right} .${axisClasses.label}`]: {
+              transform: 'translate(-50px, 0)',
+            },
           },
         }}
-        width={580}
-        height={200}
-      />
+    
+        />
     </Grid>
   )
 }
