@@ -3,6 +3,8 @@ import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { IArgumentType } from '../../../globals/interfaces/IPropsModel';
 import { IMainChartData } from '../../../globals/interfaces/IChartModel';
+import CategorySubscriptModal from '../mobile_global/CategorySubscriptModal';
+import { chart_color } from '../../../globals/constants/GlobalConstant';
 const useStyles = makeStyles()(() => {
     return {
         root: {
@@ -13,7 +15,7 @@ const useStyles = makeStyles()(() => {
             borderRadius: "1rem",
             transition: "0.2s",
             padding: "1vw",
-            marginBottom : "3px",
+            marginBottom: "3px",
             "&:hover": {
                 backgroundColor: "white",
                 boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px",
@@ -38,16 +40,27 @@ export default function MobileToTalCrimeBarCharts({ data }: { data: IArgumentTyp
     ChartData.ForceCrime.push(data.args["폭력범죄 (소계)"]);
     ChartData.MoralCrime.push(data.args["풍속범죄 (소계)"]);
 
+
+    const subscript_list = {
+        "강력범죄 소계": chart_color.green,
+        "지능범죄 (소계)": chart_color.blue,
+        "폭력범죄 (소계)": chart_color.purple,
+        "풍속범죄 (소계)": chart_color.margenta,
+    }
+
     return (
         <Grid container className={classes.root}>
-            <Typography>대분류 소주제별 세부 통계</Typography>
+            <div style={{display : "flex", flexDirection : "column" , alignItems : "center"}}>
+                <Typography>대분류 소주제별 세부 통계</Typography>
+                <CategorySubscriptModal subscriptList={subscript_list} />
+            </div>
             <BarChart
                 xAxis={[{ scaleType: 'band', data: [''] }]}
                 series={[
-                    { data: ChartData.ViolentCrime, label: "강력 범죄 (소계)" },
-                    { data: ChartData.CriminalMastermind, label: '지능 범죄 (소계)' },
-                    { data: ChartData.ForceCrime, label: '폭력 범죄 (소계)' },
-                    { data: ChartData.MoralCrime, label: '풍속 범죄 (소계)' },
+                    { data: ChartData.ViolentCrime },
+                    { data: ChartData.CriminalMastermind },
+                    { data: ChartData.ForceCrime },
+                    { data: ChartData.MoralCrime },
                 ]}
                 // width={850}
                 height={380}

@@ -26,8 +26,6 @@ export default function ToTalCrimeBarCharts({ data }: { data: IArgumentType }) {
 
     const { classes } = useStyles();
 
-    console.log(data.args);
-
     const ChartData: IMainChartData = {
         ViolentCrime: chart_data_to_array(data.args.average["강력범죄 (소계)"]),
         CriminalMastermind: chart_data_to_array(data.args.average["지능범죄 (소계)"]),

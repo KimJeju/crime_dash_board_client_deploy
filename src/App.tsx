@@ -20,8 +20,6 @@ export function App() {
     };
   }, []);
 
-  console.log(browerWid);
-
   if (browerWid <= 1400) {
     return (
       <>
