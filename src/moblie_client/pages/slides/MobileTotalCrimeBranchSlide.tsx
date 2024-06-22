@@ -52,8 +52,9 @@ const useStyles = makeStyles()(() => {
     },
     selector_layout: {
       display: "flex",
-      flexDirection: "row",
+      flexDirection: "column",
       marginBottom : "3px",
+      alignItems : "left"
     },
   };
 });
