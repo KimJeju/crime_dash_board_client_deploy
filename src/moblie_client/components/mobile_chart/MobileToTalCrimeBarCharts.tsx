@@ -5,7 +5,6 @@ import { IArgumentType } from '../../../globals/interfaces/IPropsModel';
 import { IMainChartData } from '../../../globals/interfaces/IChartModel';
 import CategorySubscriptModal from '../mobile_global/CategorySubscriptModal';
 import { chart_color } from '../../../globals/constants/GlobalConstant';
-import { left } from '@popperjs/core';
 const useStyles = makeStyles()(() => {
     return {
         root: {
