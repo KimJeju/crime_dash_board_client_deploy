@@ -5,6 +5,7 @@ import { IArgumentType } from '../../../globals/interfaces/IPropsModel';
 import { IMainChartData } from '../../../globals/interfaces/IChartModel';
 import CategorySubscriptModal from '../mobile_global/CategorySubscriptModal';
 import { chart_color } from '../../../globals/constants/GlobalConstant';
+import { left } from '@popperjs/core';
 const useStyles = makeStyles()(() => {
     return {
         root: {
@@ -63,9 +64,10 @@ export default function MobileToTalCrimeBarCharts({ data }: { data: IArgumentTyp
                     { data: ChartData.MoralCrime },
                 ]}
                 // width={850}
-                height={380}
+                height={330}
                 layout="vertical"
                 grid={{ vertical: true }}
+                margin={{ left : 100}}
             />
         </Grid>
     )
