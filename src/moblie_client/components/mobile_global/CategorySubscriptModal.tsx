@@ -26,7 +26,7 @@ export default function CategorySubscriptModal({ subscriptList }: { subscriptLis
             <Button onClick={handleOpen} >
                 <p>
                     <GridViewIcon/>
-                    카테고리 보기
+                    차트 카테고리 보기
                 </p>
             </Button>
             <Modal
