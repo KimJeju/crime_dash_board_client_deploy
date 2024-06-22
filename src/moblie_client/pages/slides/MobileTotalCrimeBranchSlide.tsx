@@ -1,19 +1,20 @@
-import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import { useState } from 'react';
 import { makeStyles } from 'tss-react/mui';
 import { IArgumentType } from '../../../globals/interfaces/IPropsModel';
 import { totalCrimebranchState } from '../../../web_clinet/state/crime_branch/total/CrimeBranchState';
 import { useRecoilValue } from 'recoil';
+import { TotalBranchSubjectSelector } from '../../../globals/Componenets/selectors/TotalBranchSubjectSelector';
+import { crime_branch_avg_subject_value } from '../../../globals/constants/CrimeBranch';
+import { AvgSubjectOnChangeBtn } from '../../globals/AvgSubjectOnChangeBtn';
+import { mobileCrimeBranchTotalAvgSubjectState } from '../../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState';
 // import { dynamicSubCategoryState } from '../../../web_clinet/state/crime_branch/total/DynamicSubjectState';
 // import { arrestAverageState, occurrencesAverageState } from '../../../web_clinet/state/crime_branch/total/SubjectAverageState';
 import SingDataBox from '../../../web_clinet/components/SingleDataBox';
 import Container from 'react-bootstrap/esm/Container';
 import Stack from 'react-bootstrap/esm/Stack';
-import { TotalBranchSubjectSelector } from '../../../globals/Componenets/selectors/TotalBranchSubjectSelector';
-import { crime_branch_avg_subject_value } from '../../../globals/constants/CrimeBranch';
-import { AvgSubjectOnChangeBtn } from '../../globals/AvgSubjectOnChangeBtn';
-import { mobileCrimeBranchTotalAvgSubjectState } from '../../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState';
-import MobileTotalAverageSubjectPieChart from '../../components/mobile_chart/MobileTotalAverageSubjectPieChart';
+import MobileToTalCrimeBarCharts from '../../components/mobile_chart/MobileToTalCrimeBarCharts';
+
 const useStyles = makeStyles()(() => {
   return {
     root: {
@@ -43,6 +44,11 @@ const useStyles = makeStyles()(() => {
       display: "flex",
       flexDirection: "column",
       padding: "1%",
+    },
+    selector_layout: {
+      display: "flex",
+      flexDirection: "row",
+      marginBottom : "3px"
     },
   };
 });
@@ -80,7 +86,7 @@ function MobileTotalCrimeBranchSlide() {
       }}
     >
       <Carousel.Item >
-        <Container>
+        <Container style={{ height : "600px"}}>
           <Stack>
             {
 
@@ -92,17 +98,16 @@ function MobileTotalCrimeBranchSlide() {
         </Container>
       </Carousel.Item>
       <Carousel.Item>
-        <Container>
+        <Container style={{height : "600px"}}>
           <Stack className={classes.chart_layout}>
             <div className={classes.chart_title}>세부항목 별 총계</div>
             <br />
+            <div className={classes.selector_layout}>
             <TotalBranchSubjectSelector args={crime_branch_avg_subject_value} />
-            <br />
             <AvgSubjectOnChangeBtn />
-            <br />
-            <MobileTotalAverageSubjectPieChart data={mobile_total_avg_catetory_args} />
-            <br />
+            </div>
           </Stack>
+          <MobileToTalCrimeBarCharts data={mobile_total_avg_catetory_args}/>
         </Container>
       </Carousel.Item>
     </Carousel>

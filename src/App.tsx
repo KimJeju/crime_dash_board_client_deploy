@@ -20,7 +20,9 @@ export function App() {
     };
   }, []);
 
-  if (browerWid <= 800) {
+  console.log(browerWid);
+
+  if (browerWid <= 1400) {
     return (
       <>
         <CrimeBranchMobileView />

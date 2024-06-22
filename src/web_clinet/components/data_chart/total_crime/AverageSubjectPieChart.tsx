@@ -8,23 +8,23 @@ import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
 const useStyles = makeStyles()(() => {
   return {
     root: {
-      display : "flex",
-      alignItems : "center",
-      flexDirection : "column",
-      height : "25vh",
+      display: "flex",
+      alignItems: "center",
+      flexDirection: "column",
+      height: "25vh",
       boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-      borderRadius : "1rem",
-      transition : "0.2s",
-      "&:hover" : {
-        backgroundColor : "white",
+      borderRadius: "1rem",
+      transition: "0.2s",
+      "&:hover": {
+        backgroundColor: "white",
         boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px",
 
-    }
+      }
     },
   };
 });
 
-export default function AverageSubjectPieChart({data} : {data : IArgumentType}) {
+export default function AverageSubjectPieChart({ data }: { data: IArgumentType }) {
 
   const { classes } = useStyles();
 
@@ -35,7 +35,7 @@ export default function AverageSubjectPieChart({data} : {data : IArgumentType}) 
   const column_array = chart_data_columns_to_array(data.args);
 
   return (
-      <Grid item xs={5.8}  className={classes.root}>
+    <Grid item xs={5.8} className={classes.root}>
       <Typography>{data.key}</Typography>
       <PieChart
         series={[
@@ -47,25 +47,26 @@ export default function AverageSubjectPieChart({data} : {data : IArgumentType}) 
               { id: 3, value: pie_data.AverageSubject[3], label: column_array[3] },
             ],
             highlightScope: { faded: 'global', highlighted: 'item' },
-              },
+          },
         ]}
         slotProps={{
           legend: {
             direction: 'column',
             position: { vertical: 'middle', horizontal: 'right' },
             padding: 15,
-            
-            
+
+
           },
         }}
         height={200}
         sx={{
           sx: {
-              [`.${axisClasses.left} .${axisClasses.label}`]: {
-                transform: 'translate(-50px, 0)',
-              },
+            [`.${axisClasses.left} .${axisClasses.label}`]: {
+              transform: 'translate(-50px, 0)',
             },
-      }}      />
+          },
+        }}
+      />
     </Grid>
   )
 }
