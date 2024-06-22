@@ -50,7 +50,7 @@ export default function MobileToTalCrimeBarCharts({ data }: { data: IArgumentTyp
                     { data: ChartData.MoralCrime, label: '풍속 범죄 (소계)' },
                 ]}
                 // width={850}
-                height={380}
+                height={400}
                 layout="vertical"
                 grid={{ vertical: true }}
             />

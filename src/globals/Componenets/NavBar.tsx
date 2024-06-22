@@ -23,8 +23,10 @@ export function NavBar({link_list}: {link_list:Array<string>}){
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href={link_list[0]}>경찰청데이터</Nav.Link>
-              <Nav.Link href={link_list[1]}>공공데이터</Nav.Link>
-              <Nav.Link href={link_list[2]}>범죄통계 DB</Nav.Link>
+              {/* <Nav.Link href={link_list[1]}>공공데이터</Nav.Link>
+              <Nav.Link href={link_list[2]}>범죄통계 DB</Nav.Link> */}
+
+              
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">

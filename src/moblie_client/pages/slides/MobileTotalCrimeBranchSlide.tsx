@@ -31,6 +31,11 @@ const useStyles = makeStyles()(() => {
         boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)"
       }
     },
+    total_title : {
+      fontSize : "1.2rem",
+      fontWeight : "400",
+      paddingLeft : "5px"
+    },
     chart_title: {
       display: "flex",
       alignItems : "center",
@@ -48,7 +53,7 @@ const useStyles = makeStyles()(() => {
     selector_layout: {
       display: "flex",
       flexDirection: "row",
-      marginBottom : "3px"
+      marginBottom : "3px",
     },
   };
 });
@@ -86,8 +91,9 @@ function MobileTotalCrimeBranchSlide() {
       }}
     >
       <Carousel.Item >
-        <Container style={{ height : "600px"}}>
+        <Container style={{ height : "600px", marginBottom : "1.5vh"}}>
           <Stack>
+            <p className={classes.total_title}>총 계</p>
             {
 
               Object.entries(total_data_args.args.average["총 계"]).map((el, index) => (
@@ -98,7 +104,7 @@ function MobileTotalCrimeBranchSlide() {
         </Container>
       </Carousel.Item>
       <Carousel.Item>
-        <Container style={{height : "600px"}}>
+        <Container style={{height : "613.5px"}}>
           <Stack className={classes.chart_layout}>
             <div className={classes.chart_title}>세부항목 별 총계</div>
             <br />
