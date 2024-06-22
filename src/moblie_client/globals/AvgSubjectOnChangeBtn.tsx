@@ -32,7 +32,7 @@ export function AvgSubjectOnChangeBtn(){
         }
     }
     return(
-        <Button variant="contained" style={{ width : "calc(10%)", marginLeft : "1vw"}}
+        <Button variant="contained" style={{ width : "calc(5%)", marginLeft : "5%"}}
         onClick={() => {
             onChangeMobileTotalAvg();
         }}>검색</Button>
