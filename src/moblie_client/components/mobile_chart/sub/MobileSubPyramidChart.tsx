@@ -70,7 +70,12 @@ export function MobileSubPyramidChart({ data }: { data: IArgumentType }) {
                         
                     },
                     title: {
-                        text: '소분류 범죄발생건 8위 ~ 1위 (건)',
+                        text: '소분류 범죄발생건 1위 ~ 8위 (건)',
+                        align : "center",
+                        style : {
+                            fontWeight : 400,
+                            
+                        }
                     },
                     xaxis: {
                         categories: ['강제추행', '성품속범죄', '상해', '협박', '손괴', '횡령', '폭행', '사기'],

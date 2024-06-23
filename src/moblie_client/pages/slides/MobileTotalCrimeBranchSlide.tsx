@@ -33,16 +33,16 @@ const useStyles = makeStyles()(() => {
     },
     total_title : {
       fontSize : "1.2rem",
-      fontWeight : "400",
+      fontWeight : "300",
       paddingLeft : "5px",
       borderBottom : "1px dashed grey"
     },
     chart_title: {
       display: "flex",
       alignItems : "center",
-      fontSize: "1.4rem",
-      boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px",
-      fontWeight: "400",
+      fontSize: "1.2rem",
+      borderBottom : "1px dashed grey",
+      fontWeight: "300",
       height: "50px",
     },
     chart_layout: {

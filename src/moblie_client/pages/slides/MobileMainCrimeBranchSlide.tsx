@@ -27,12 +27,12 @@ const useStyles = makeStyles()(() => {
     chart_title: {
       display: "flex",
       alignItems: "center",
-      fontSize: "1.4rem",
-      boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px",
-      fontWeight: "400",
+      fontSize: "1.2rem",
+      fontWeight: "300",
       height: "50px",
       padding: "1vw",
-      paddingLeft : "20px"
+      paddingLeft : "20px",
+      borderBottom : "1px dashed grey"
     },
   };
 });
