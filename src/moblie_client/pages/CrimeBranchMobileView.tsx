@@ -14,6 +14,7 @@ import { useMemo, useState } from "react";
 import BranchOnChangeBtn from "../../web_clinet/components/global/BranchOnChangeBtn";
 import { mobileCrimeBranchTotalAvgSubjectState } from "../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState";
 import { FooterBar } from "../../globals/Componenets/FooterBar";
+import Loading from "../../globals/Componenets/Loading";
 const useStyles = makeStyles()(() => {
     return {
         warpper: {
@@ -77,7 +78,7 @@ export function CrimeBranchMobileView() {
 
     if (loading == true) {
         return (
-            <></>
+            <Loading />
         )
     } else {
         return (

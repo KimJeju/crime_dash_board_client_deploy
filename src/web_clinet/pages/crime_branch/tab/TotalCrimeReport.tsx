@@ -14,6 +14,7 @@ import ToTalCrimeBarCharts from "../../../components/data_chart/total_crime/ToTa
 import AverageSubjectPieChart from "../../../components/data_chart/total_crime/AverageSubjectPieChart";
 import DynamicSubjectLineChart from "../../../components/data_chart/total_crime/DynamicSubjectLineChart";
 import SwarmPlotChart from "../../../components/data_chart/total_crime/SwarmPlotChart";
+import Loading from "../../../../globals/Componenets/Loading";
 
 const useStyles = makeStyles()(() => {
     return {
@@ -105,7 +106,7 @@ export default function TotalCrimeReport() {
 
 
     if (loading == true) {
-        return <></>
+        return <Loading />
     } else {
         return (
             <Grid container xs={12} spacing={2} className={classes.root} >
