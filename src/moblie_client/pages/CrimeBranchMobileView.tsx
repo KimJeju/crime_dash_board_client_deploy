@@ -13,6 +13,7 @@ import Stack from 'react-bootstrap/Stack';
 import { useMemo, useState } from "react";
 import BranchOnChangeBtn from "../../web_clinet/components/global/BranchOnChangeBtn";
 import { mobileCrimeBranchTotalAvgSubjectState } from "../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState";
+import { FooterBar } from "../../globals/Componenets/FooterBar";
 const useStyles = makeStyles()(() => {
     return {
         warpper: {
@@ -92,6 +93,7 @@ export function CrimeBranchMobileView() {
                         <CrimeBranchMobileTap />
                     </Stack>
                 </Container>
+                <FooterBar />
             </div>
         )
     }

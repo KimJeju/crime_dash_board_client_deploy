@@ -6,6 +6,7 @@ import BranchOnChangeBtn from "../../components/global/BranchOnChangeBtn";
 import { TotalBranchSelector } from "../../../globals/Componenets/selectors/TotalBranchSelector";
 import { crime_branch_selector_value } from "../../../globals/constants/CrimeBranch";
 import { NavBar } from "../../../globals/Componenets/NavBar";
+import { FooterBar } from "../../../globals/Componenets/FooterBar";
 
 
 
@@ -40,6 +41,7 @@ export default function CrimeBranchWebView() {
                 </SelectorContainer>
                 <CrimeBranchTap />
             </Container>
+            <FooterBar />
         </>
     )
 }
