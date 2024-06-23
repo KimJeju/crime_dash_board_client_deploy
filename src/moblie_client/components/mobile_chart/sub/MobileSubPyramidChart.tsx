@@ -61,6 +61,7 @@ export function MobileSubPyramidChart({ data }: { data: IArgumentType }) {
                     dataLabels: {
                         enabled: true,
                         formatter: function (val, opt) {
+                            console.warn(val);
                             return opt.w.globals.labels[opt.dataPointIndex]
                         },
                         dropShadow: {

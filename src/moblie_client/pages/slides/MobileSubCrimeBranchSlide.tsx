@@ -5,7 +5,6 @@ import { makeStyles } from 'tss-react/mui';
 import { useRecoilValue } from 'recoil';
 import { subDataSubjectState } from '../../../web_clinet/state/crime_branch/sub/SubDataState';
 import { IArgumentType } from '../../../globals/interfaces/IPropsModel';
-import { chart_data_columns_to_array, chart_data_to_array } from '../../../globals/utils/ChartDataUtil';
 import { MobileSubPyramidChart } from '../../components/mobile_chart/sub/MobileSubPyramidChart';
 const useStyles = makeStyles()(() => {
   return {
