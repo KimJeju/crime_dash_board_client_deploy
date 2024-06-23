@@ -45,7 +45,7 @@ export default function CategorySubscriptModal({ subscriptList }: { subscriptLis
                         {
                             Object.entries(subscriptList).map((el, index) => (
 
-                                <div key={index} style={{ display: "flex", flexDirection: "row", marginTop: "25px", borderBottom: "1px dashed grey" }}>
+                                <div key={index} style={{ display: "flex", flexDirection: "row", marginTop: "calc(3%)", borderBottom: "1px dashed grey" }}>
                                     <div style={{ width: "20px", height: "20px", backgroundColor: `${el[1]}`, marginRight: "5px" }} />
                                     <div style={{ fontWeight: "400" }}>{el[0]}</div>
                                 </div>
