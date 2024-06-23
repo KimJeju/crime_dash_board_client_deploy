@@ -44,12 +44,10 @@ const useStyles = makeStyles()(() => {
       boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px",
       fontWeight: "400",
       height: "50px",
-      padding : "1vw"
     },
     chart_layout: {
       display: "flex",
       flexDirection: "column",
-      padding: "1%",
     },
     selector_layout: {
       display: "flex",
