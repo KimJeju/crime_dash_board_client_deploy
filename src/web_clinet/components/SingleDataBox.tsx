@@ -24,7 +24,7 @@ const useStyles = makeStyles()(() => {
             fontSize: "1.0rem",
             transition: "0.5s",
             '&:hover': {
-                fontSize: "1.6rem"
+                fontSize: "1.3rem"
             }
         }
 

@@ -24,6 +24,7 @@ export function App() {
     return (
       <>
         <CrimeBranchMobileView />
+        
       </>
     )
   } else {

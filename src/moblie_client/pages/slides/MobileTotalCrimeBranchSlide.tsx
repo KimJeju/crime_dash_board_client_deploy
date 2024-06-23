@@ -34,7 +34,8 @@ const useStyles = makeStyles()(() => {
     total_title : {
       fontSize : "1.2rem",
       fontWeight : "400",
-      paddingLeft : "5px"
+      paddingLeft : "5px",
+      borderBottom : "1px dashed grey"
     },
     chart_title: {
       display: "flex",
