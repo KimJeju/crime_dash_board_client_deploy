@@ -24,12 +24,6 @@ const useStyles = makeStyles()(() => {
         boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)"
       }
     },
-    total_title: {
-      fontSize: "1.2rem",
-      fontWeight: "400",
-      paddingLeft: "5px",
-      borderBottom: "1px dashed grey"
-    },
     chart_title: {
       display: "flex",
       alignItems: "center",
@@ -37,18 +31,8 @@ const useStyles = makeStyles()(() => {
       boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px",
       fontWeight: "400",
       height: "50px",
-      padding: "1vw"
-    },
-    chart_layout: {
-      display: "flex",
-      flexDirection: "column",
-      padding: "1%",
-    },
-    selector_layout: {
-      display: "flex",
-      flexDirection: "column",
-      marginBottom: "3px",
-      alignItems: "left"
+      padding: "1vw",
+      paddingLeft : "20px"
     },
   };
 });
