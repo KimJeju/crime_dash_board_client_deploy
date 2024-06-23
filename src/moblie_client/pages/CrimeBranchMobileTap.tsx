@@ -3,6 +3,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import MobileTotalCrimeBranchSlide from './slides/MobileTotalCrimeBranchSlide';
 import MobileMainCrimeBranchSlide from './slides/MobileMainCrimeBranchSlide';
+import MobileSubCrimeBranchSlide from './slides/MobileSubCrimeBranchSlide';
 
 export function CrimeBranchMobileTap() {
   return (
@@ -18,7 +19,7 @@ export function CrimeBranchMobileTap() {
         <MobileMainCrimeBranchSlide />
       </Tab>
       <Tab eventKey="sub" title="소분류">
-        개발 중 입니다.
+        <MobileSubCrimeBranchSlide />
       </Tab>
     </Tabs>
   );
