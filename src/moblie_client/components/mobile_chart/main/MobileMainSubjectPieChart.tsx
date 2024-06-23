@@ -5,8 +5,8 @@ import { PieChart, axisClasses } from "@mui/x-charts";
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
-import CategorySubscriptModal from "../../../../moblie_client/components/mobile_global/CategorySubscriptModal";
-import { main_subscript_list } from "../../../../globals/constants/GlobalConstant";
+import { chart_color, main_subscript_list } from "../../../../globals/constants/GlobalConstant";
+import CategorySubscriptModal from "../../mobile_global/CategorySubscriptModal";
 const useStyles = makeStyles()(() => {
   return {
     root: {
@@ -29,12 +29,12 @@ const useStyles = makeStyles()(() => {
 
 const sizing = {
   margin: { right: 20 },
-  width: 300,
-  height: 300,
+  width: 200,
+  height: 200,
   legend: { hidden: true },
 };
 
-export default function MainSubjectPieChart({data} : {data : IArgumentType}) {
+export default function MobileMainSubjectPieChart({data} : {data : IArgumentType}) {
 
   const { classes } = useStyles();
 
@@ -42,24 +42,26 @@ export default function MainSubjectPieChart({data} : {data : IArgumentType}) {
     AverageSubject: chart_data_to_array(data.args)
   }
 
+
+
   return (
-      <Grid item xs={3.8}  className={classes.root}>
+      <div className={classes.root}>
       <Typography>{data.key}</Typography>
       <CategorySubscriptModal subscriptList={main_subscript_list} />
       <PieChart
         series={[
           {
             data: [
-              { id: 0, value: pie_data.AverageSubject[0],},
-              { id: 1, value: pie_data.AverageSubject[1],},
-              { id: 2, value: pie_data.AverageSubject[2],},
-              { id: 3, value: pie_data.AverageSubject[3],},
-              { id: 4, value: pie_data.AverageSubject[4],},
-              { id: 5, value: pie_data.AverageSubject[5],},
-              { id: 6, value: pie_data.AverageSubject[6],},
-              { id: 7, value: pie_data.AverageSubject[7],},
-              { id: 8, value: pie_data.AverageSubject[8],},
-              { id: 9, value: pie_data.AverageSubject[9],},
+              { id: 0, value: pie_data.AverageSubject[0], },
+              { id: 1, value: pie_data.AverageSubject[1], },
+              { id: 2, value: pie_data.AverageSubject[2], },
+              { id: 3, value: pie_data.AverageSubject[3], },
+              { id: 4, value: pie_data.AverageSubject[4], },
+              { id: 5, value: pie_data.AverageSubject[5], },
+              { id: 6, value: pie_data.AverageSubject[6], },
+              { id: 7, value: pie_data.AverageSubject[7], },
+              { id: 8, value: pie_data.AverageSubject[8], },
+              { id: 9, value: pie_data.AverageSubject[9], },
               { id: 10, value: pie_data.AverageSubject[10],},
 
             ],
@@ -69,6 +71,6 @@ export default function MainSubjectPieChart({data} : {data : IArgumentType}) {
         ]}
         {...sizing}
         />
-    </Grid>
+    </div >
   )
 }

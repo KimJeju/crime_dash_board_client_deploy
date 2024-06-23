@@ -13,7 +13,7 @@ import { mobileCrimeBranchTotalAvgSubjectState } from '../../state/mobile_crime_
 import SingDataBox from '../../../web_clinet/components/SingleDataBox';
 import Container from 'react-bootstrap/esm/Container';
 import Stack from 'react-bootstrap/esm/Stack';
-import MobileToTalCrimeBarCharts from '../../components/mobile_chart/MobileToTalCrimeBarCharts';
+import MobileToTalCrimeBarCharts from '../../components/mobile_chart/total/MobileToTalCrimeBarCharts';
 
 const useStyles = makeStyles()(() => {
   return {

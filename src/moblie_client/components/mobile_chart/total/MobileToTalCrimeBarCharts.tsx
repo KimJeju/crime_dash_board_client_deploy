@@ -1,10 +1,10 @@
 import { BarChart } from '@mui/x-charts/BarChart';
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
-import { IArgumentType } from '../../../globals/interfaces/IPropsModel';
-import { IMainChartData } from '../../../globals/interfaces/IChartModel';
-import CategorySubscriptModal from '../mobile_global/CategorySubscriptModal';
-import { chart_color } from '../../../globals/constants/GlobalConstant';
+import { IArgumentType } from '../../../../globals/interfaces/IPropsModel';
+import { IMainChartData } from '../../../../globals/interfaces/IChartModel';
+import CategorySubscriptModal from '../../mobile_global/CategorySubscriptModal';
+import { chart_color } from '../../../../globals/constants/GlobalConstant';
 const useStyles = makeStyles()(() => {
     return {
         root: {

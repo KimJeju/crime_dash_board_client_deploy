@@ -23,7 +23,7 @@ const useStyle = makeStyles()(() => {
 export function MainTreeMap({ data }: { data: IArgumentType }) {
 
     const { classes } = useStyle()
-    
+
     let data_set = get_tree_map_data_set(data.args);
 
     //분기 변화 시 데이터 초기화 후 재 정의
