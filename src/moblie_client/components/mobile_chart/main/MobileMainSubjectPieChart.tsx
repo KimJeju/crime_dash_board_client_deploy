@@ -1,28 +1,28 @@
 
 import { IPieChartData } from "../../../../globals/interfaces/IChartModel";
-import { chart_data_columns_to_array, chart_data_to_array } from "../../../../globals/utils/ChartDataUtil";
-import { PieChart, axisClasses } from "@mui/x-charts";
-import { Grid, Typography } from "@mui/material";
+import { chart_data_to_array } from "../../../../globals/utils/ChartDataUtil";
+import { PieChart } from "@mui/x-charts";
+import { Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
-import { chart_color, main_subscript_list } from "../../../../globals/constants/GlobalConstant";
+import { main_subscript_list } from "../../../../globals/constants/GlobalConstant";
 import CategorySubscriptModal from "../../mobile_global/CategorySubscriptModal";
 const useStyles = makeStyles()(() => {
   return {
     root: {
-      display : "flex",
-      alignItems : "center",
-      flexDirection : "column",
-      height : "25vh",
+      display: "flex",
+      alignItems: "center",
+      flexDirection: "column",
+      height: "25vh",
       boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-      borderRadius : "1rem",
-      transition : "0.2s",
+      borderRadius: "1rem",
+      transition: "0.2s",
       // paddingRight : "50px",
-      "&:hover" : {
-        backgroundColor : "white",
+      "&:hover": {
+        backgroundColor: "white",
         boxShadow: "rgba(0, 0, 0, 0.24) 3px 6px 16px",
 
-    }
+      }
     },
   };
 });
@@ -34,7 +34,7 @@ const sizing = {
   legend: { hidden: true },
 };
 
-export default function MobileMainSubjectPieChart({data} : {data : IArgumentType}) {
+export default function MobileMainSubjectPieChart({ data }: { data: IArgumentType }) {
 
   const { classes } = useStyles();
 
@@ -45,7 +45,7 @@ export default function MobileMainSubjectPieChart({data} : {data : IArgumentType
 
 
   return (
-      <div className={classes.root}>
+    <div className={classes.root}>
       <Typography>{data.key}</Typography>
       <CategorySubscriptModal subscriptList={main_subscript_list} />
       <PieChart
@@ -62,7 +62,7 @@ export default function MobileMainSubjectPieChart({data} : {data : IArgumentType
               { id: 7, value: pie_data.AverageSubject[7], },
               { id: 8, value: pie_data.AverageSubject[8], },
               { id: 9, value: pie_data.AverageSubject[9], },
-              { id: 10, value: pie_data.AverageSubject[10],},
+              { id: 10, value: pie_data.AverageSubject[10], },
 
             ],
             highlightScope: { faded: 'global', highlighted: 'item' },
@@ -70,7 +70,7 @@ export default function MobileMainSubjectPieChart({data} : {data : IArgumentType
           },
         ]}
         {...sizing}
-        />
+      />
     </div >
   )
 }
