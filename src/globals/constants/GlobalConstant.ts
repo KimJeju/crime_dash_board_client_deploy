@@ -1,7 +1,11 @@
+// fastapi
 // export const crime_branch_default_url = "https://port-0-crime-dash-board-server-deploy-lxe5h085f14d72b3.sel5.cloudtype.app/crime_branch/"
 
-export const crime_branch_default_url = "http://localhost:8000/crime_branch/"
+// local
+// export const crime_branch_default_url = "http://localhost:8000/crime_branch/"
 
+// django
+export const crime_branch_default_url = "https://port-0-crime-dash-server-lxe5h085f14d72b3.sel5.cloudtype.app/crime_branch/"
 
 export const chart_color = {
     green : "#05B1AF",
