@@ -6,8 +6,8 @@ import { RecoilRoot } from 'recoil'
 import App from './App.tsx'
 import CrimeBranchWebView from './web_clinet/pages/crime_branch/CrimeBranchWebView.tsx'
 import { CrimeBranchMobileView } from './moblie_client/pages/CrimeBranchMobileView.tsx'
-import PageError from './globals/componenets/PageError.tsx'
-import Sorry from './globals/componenets/Sorry.tsx'
+import PageError from './globals/Componenets/PageError.tsx'
+import Sorry from './globals/Componenets/Sorry.tsx'
 
 const router = createBrowserRouter([
   {

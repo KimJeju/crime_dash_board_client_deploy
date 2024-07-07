@@ -9,12 +9,12 @@ import { crimeBranchTransitionState, totalCrimebranchState } from "../../../stat
 import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
 
 //components
-import SingDataBox from "../../../components/SingleDataBox";
-import ToTalCrimeBarCharts from "../../../components/data_chart/total_crime/ToTalCrimeBarCharts";
-import AverageSubjectPieChart from "../../../components/data_chart/total_crime/AverageSubjectPieChart";
-import DynamicSubjectLineChart from "../../../components/data_chart/total_crime/DynamicSubjectLineChart";
-import SwarmPlotChart from "../../../components/data_chart/total_crime/SwarmPlotChart";
-import Loading from "../../../../globals/componenets/Loading";
+import SingDataBox from "../../../Components/SingleDataBox";
+import ToTalCrimeBarCharts from "../../../Components/data_chart/total_crime/ToTalCrimeBarCharts";
+import AverageSubjectPieChart from "../../../Components/data_chart/total_crime/AverageSubjectPieChart";
+import DynamicSubjectLineChart from "../../../Components/data_chart/total_crime/DynamicSubjectLineChart";
+import SwarmPlotChart from "../../../Components/data_chart/total_crime/SwarmPlotChart";
+import Loading from "../../../../globals/Componenets/Loading";
 import { crime_title } from "../../../../globals/constants/CrimeBranch";
 
 const useStyles = makeStyles()(() => {

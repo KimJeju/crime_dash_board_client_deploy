@@ -7,7 +7,7 @@ import { makeStyles } from 'tss-react/mui';
 import { IArgumentType } from '../../../globals/interfaces/IPropsModel';
 import { useRecoilValue } from 'recoil';
 import { mainDataArrestPersentState, mainDataOccurrenceState } from '../../../web_clinet/state/crime_branch/main/MainDataState';
-import { MainTreeMap } from '../../../web_clinet/components/data_chart/main_crime/MainTreeMap';
+import { MainTreeMap } from '../../../web_clinet/Components/data_chart/main_crime/MainTreeMap';
 const useStyles = makeStyles()(() => {
   return {
     root: {

@@ -1,13 +1,13 @@
 import { Grid } from "@mui/material"
 import { makeStyles } from "tss-react/mui"
-import SubHorizontalBarChart from "../../../components/data_chart/sub_crime/SubHorizontalBarChart";
+import SubHorizontalBarChart from "../../../Components/data_chart/sub_crime/SubHorizontalBarChart";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { subDataSubjectState } from "../../../state/crime_branch/sub/SubDataState";
 import { useMemo } from "react";
 import { get_dynamic_subject_data } from "../../../../globals/contexts/CrimeBranchContext";
 import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
-import { SubSubjectSelector } from "../../../../globals/componenets/selectors/SubSubjectSelector";
-import { SubSubjectOnChangeBtn } from "../../../components/global/SubSubjectOnChangeBtn";
+import { SubSubjectSelector } from "../../../../globals/Componenets/selectors/SubSubjectSelector";
+import { SubSubjectOnChangeBtn } from "../../../Components/global/SubSubjectOnChangeBtn";
 import { crime_branch_sub_subject_value } from "../../../../globals/constants/CrimeBranch";
 const useStyle = makeStyles()({
     root: {
