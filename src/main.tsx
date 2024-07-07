@@ -2,12 +2,12 @@ import ReactDOM from 'react-dom/client'
 // import App from './App.tsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import PageError from './globals/componenets/PageError.tsx'
 import { RecoilRoot } from 'recoil'
 import App from './App.tsx'
-import Sorry from './globals/componenets/Sorry.tsx'
 import CrimeBranchWebView from './web_clinet/pages/crime_branch/CrimeBranchWebView.tsx'
 import { CrimeBranchMobileView } from './moblie_client/pages/CrimeBranchMobileView.tsx'
+import PageError from './globals/componenets/PageError.tsx'
+import Sorry from './globals/componenets/Sorry.tsx'
 
 const router = createBrowserRouter([
   {

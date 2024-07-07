@@ -4,7 +4,6 @@ import { makeStyles } from 'tss-react/mui';
 import { IArgumentType } from '../../../globals/interfaces/IPropsModel';
 import { totalCrimebranchState } from '../../../web_clinet/state/crime_branch/total/CrimeBranchState';
 import { useRecoilValue } from 'recoil';
-import { TotalBranchSubjectSelector } from '../../../globals/componenets/selectors/TotalBranchSubjectSelector';
 import { crime_branch_avg_subject_value } from '../../../globals/constants/CrimeBranch';
 import { AvgSubjectOnChangeBtn } from '../../globals/AvgSubjectOnChangeBtn';
 import { mobileCrimeBranchTotalAvgSubjectState } from '../../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState';
@@ -14,6 +13,7 @@ import SingDataBox from '../../../web_clinet/components/SingleDataBox';
 import Container from 'react-bootstrap/esm/Container';
 import Stack from 'react-bootstrap/esm/Stack';
 import MobileToTalCrimeBarCharts from '../../components/mobile_chart/total/MobileToTalCrimeBarCharts';
+import { TotalBranchSubjectSelector } from '../../../globals/componenets/selectors/TotalBranchSubjectSelector';
 
 const useStyles = makeStyles()(() => {
   return {

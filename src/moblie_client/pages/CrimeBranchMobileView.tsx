@@ -2,7 +2,6 @@ import Container from "react-bootstrap/esm/Container";
 import Stack from 'react-bootstrap/Stack';
 import BranchOnChangeBtn from "../../web_clinet/components/global/BranchOnChangeBtn";
 import { makeStyles } from "tss-react/mui";
-import { TotalBranchSelector } from "../../globals/componenets/selectors/TotalBranchSelector";
 import { crime_branch_selector_value } from "../../globals/constants/CrimeBranch";
 import { CrimeBranchMobileTap } from "./CrimeBranchMobileTap";
 import { useRecoilState } from "recoil";
@@ -10,11 +9,13 @@ import { totalCrimebranchState } from "../../web_clinet/state/crime_branch/total
 import { default_data_on_load, default_main_data_on_load, get_dynamic_subject_data } from "../../globals/contexts/CrimeBranchContext";
 import { useMemo, useState } from "react";
 import { mobileCrimeBranchTotalAvgSubjectState } from "../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState";
-import { FooterBar } from "../../globals/componenets/FooterBar";
 import { mainDataArrestPersentState, mainDataOccurrenceState } from "../../web_clinet/state/crime_branch/main/MainDataState";
 import { subDataSubjectState } from "../../web_clinet/state/crime_branch/sub/SubDataState";
-import { NavBar } from "../../globals/componenets/NavBar";
 import Loading from "../../globals/componenets/Loading";
+import { NavBar } from "../../globals/componenets/NavBar";
+import { TotalBranchSelector } from "../../globals/componenets/selectors/TotalBranchSelector";
+import { FooterBar } from "../../globals/componenets/FooterBar";
+
 
 const useStyles = makeStyles()(() => {
     return {
