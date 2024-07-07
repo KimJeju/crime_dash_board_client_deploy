@@ -4,7 +4,7 @@ import { makeStyles } from 'tss-react/mui';
 import { IArgumentType } from '../../../globals/interfaces/IPropsModel';
 import { totalCrimebranchState } from '../../../web_clinet/state/crime_branch/total/CrimeBranchState';
 import { useRecoilValue } from 'recoil';
-import { crime_branch_avg_subject_value } from '../../../globals/constants/CrimeBranch';
+import { crime_branch_avg_subject_value, crime_title } from '../../../globals/constants/CrimeBranch';
 import { AvgSubjectOnChangeBtn } from '../../globals/AvgSubjectOnChangeBtn';
 import { mobileCrimeBranchTotalAvgSubjectState } from '../../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState';
 // import { dynamicSubCategoryState } from '../../../web_clinet/state/crime_branch/total/DynamicSubjectState';
@@ -97,7 +97,7 @@ function MobileTotalCrimeBranchSlide() {
             {
 
               Object.entries(total_data_args.args.average["총 계"]).map((el, index) => (
-                <SingDataBox key={index} data={el[1] as string} avg_title={el[0]} />
+                <SingDataBox key={index} data={el[1] as string} avg_title={crime_title[index]} />
               ))
             }
           </Stack>
