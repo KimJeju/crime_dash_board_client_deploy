@@ -3,7 +3,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { totalCrimebranchState } from "../../state/crime_branch/total/CrimeBranchState";
 import { dynamicSubCategoryState } from "../../state/crime_branch/total/DynamicSubjectState";
 import { arrestAverageState, occurrencesAverageState } from "../../state/crime_branch/total/SubjectAverageState";
-import { select_main_data_on_load, select_sub_data_on_load, seleted_data_on_load } from "../../../globals/contexts/CrimeBranchContext";
+import { select_main_data_on_load, select_sub_data_on_load, selected_data_on_load } from "../../../globals/contexts/CrimeBranchContext";
 import { mainDataArrestPeopleState, mainDataArrestPersentState, mainDataArrestState, mainDataOccurrenceState } from "../../state/crime_branch/main/MainDataState";
 import { total_branch_state } from "../../state/global/SelectorState";
 import { subDataSubjectState } from "../../state/crime_branch/sub/SubDataState";
@@ -37,7 +37,7 @@ export default function BranchOnChangeBtn() {
     async function onChangeCrimeBranch() {
         try {
 
-            const seleted_total_data = await seleted_data_on_load(seletected_value.year.toString(), seletected_value.branch, "average");
+            const seleted_total_data = await selected_data_on_load(seletected_value.year.toString(), seletected_value.branch, "average");
             const seleted_main_data = await select_main_data_on_load(seletected_value.year.toString(), seletected_value.branch, "main");
             const seleted_sub_data = await select_sub_data_on_load(seletected_value.year.toString(), seletected_value.branch, "sub");
 

@@ -21,7 +21,7 @@ export async function default_data_on_load() {
 }
 
 // 분기 선택 시 실행 될 함수
-export async function seleted_data_on_load(year: string, branch: number, subject: string,) {
+export async function selected_data_on_load(year: string, branch: number, subject: string,) {
     try {
         const total_crime = await selected_branch_crime_data(year, branch);
         const sub_crime = await get_dynamic_subject_data(year, branch, "sub", "발생건수");

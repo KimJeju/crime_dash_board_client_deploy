@@ -14,7 +14,8 @@ import ToTalCrimeBarCharts from "../../../components/data_chart/total_crime/ToTa
 import AverageSubjectPieChart from "../../../components/data_chart/total_crime/AverageSubjectPieChart";
 import DynamicSubjectLineChart from "../../../components/data_chart/total_crime/DynamicSubjectLineChart";
 import SwarmPlotChart from "../../../components/data_chart/total_crime/SwarmPlotChart";
-import Loading from "../../../../globals/Componenets/Loading";
+import Loading from "../../../../globals/componenets/Loading";
+import { crime_title } from "../../../../globals/constants/CrimeBranch";
 
 const useStyles = makeStyles()(() => {
     return {
@@ -104,6 +105,7 @@ export default function TotalCrimeReport() {
         args : useRecoilValue(arrestAverageState)
     } 
 
+    
 
     if (loading == true) {
         return <Loading />
@@ -114,7 +116,7 @@ export default function TotalCrimeReport() {
                 <Grid container spacing={2} className={classes.total_avg_container}>
                     {
                         Object.entries(total_data_args.args.average["총 계"]).map((el, index) => (
-                            <SingDataBox key={index} data={el[1] as string} avg_title={el[0]} />
+                            <SingDataBox key={index} data={el[1] as string} avg_title={crime_title[index]} />
                         ))
                     }
                 </Grid>

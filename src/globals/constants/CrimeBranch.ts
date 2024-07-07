@@ -1,5 +1,13 @@
 import { ICrimeBranchAvgSubjectSeleted, ICrimeBranchMainTransitionSeleted, ICrimeBranchSelected, ICrimeBranchSubSubjectSeleted } from "../interfaces/ISelectBoxModel"
 
+export const crime_title = [
+    '발생건수',
+    '검거건수',
+    '발생대비\n검거건수(%)',
+    '검거인원',
+    '법인체'
+]
+
 export const crime_branch_selector_value : Array<ICrimeBranchSelected> = [
     { label : "2024년 1분기 범죄발생 통계", year: 2024, branch : 1},
     { label : "2023년 4분기 범죄발생 통계", year: 2023, branch : 4},
@@ -33,10 +41,8 @@ export const crime_branch_avg_subject_value : Array<ICrimeBranchAvgSubjectSelete
 export const crime_branch_sub_subject_value : Array<ICrimeBranchSubSubjectSeleted> = [
     { label : "발생건수" ,branch : 1, category: "sub", subject :"발생건수"},
     { label : "검거건수",branch : 1, category: "sub", subject :"검거건수"},
-    // { label : "발생대비 검거건수(%)" ,branch : 1, category: "sub", subject :"발생대비 검거건수(%)"},
     { label : "검거인원",branch : 1, category: "sub", subject :"검거인원"},
     { label : "법인체" ,branch : 1, category: "sub", subject :"법인체"},
-
 ]
 
                      

@@ -38,6 +38,8 @@ export default function SingDataBox({ avg_title, data }: BindingDataType) {
     const objectData: string = data as string;
     const { classes } = useStyles();
 
+    console.log(objectData)
+
     if (objectData.toString() === "대분류") {
         return (<></>)
     } else {
