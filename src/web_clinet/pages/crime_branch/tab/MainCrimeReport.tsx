@@ -5,9 +5,9 @@ import { IArgumentType } from "../../../../globals/interfaces/IPropsModel";
 import { mainDataArrestPeopleState, mainDataArrestPersentState, mainDataArrestState, mainDataOccurrenceState, mainDataTrainsitionSubjectCaterozieState, } from "../../../state/crime_branch/main/MainDataState";
 import { default_main_data_on_load, } from "../../../../globals/contexts/CrimeBranchContext";
 import { useMemo } from "react";
-import MainSubjectPieChart from "../../../Components/data_chart/main_crime/MainSubjectPieChart";
-import { MainTreeMap } from "../../../Components/data_chart/main_crime/MainTreeMap";
-import MainSubjectLineChart from "../../../Components/data_chart/main_crime/MainSubjectLineChart";
+import MainSubjectPieChart from "../../../components/data_chart/main_crime/MainSubjectPieChart";
+import { MainTreeMap } from "../../../components/data_chart/main_crime/MainTreeMap";
+import MainSubjectLineChart from "../../../components/data_chart/main_crime/MainSubjectLineChart";
 
 const useStyle = makeStyles()(() => {
     return {

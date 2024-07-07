@@ -5,7 +5,7 @@ import { chart_data_columns_to_array, chart_data_to_array, line_chart_data_slice
 import { ILineChartData, IMainTransitionChartData } from "../../../../globals/interfaces/IChartModel";
 import { LineChart, axisClasses } from "@mui/x-charts";
 import { MainTransitionOnChangeBtn } from "../../global/MainTransitionOnChangeBtn";
-import { MainTransitionSelector } from "../../../../globals/Componenets/selectors/MainTransitionSelector";
+import { MainTransitionSelector } from "../../../../globals/componenets/selectors/MainTransitionSelector";
 import { crime_branch_main_transition_value } from "../../../../globals/constants/CrimeBranch";
 const useStyles = makeStyles()(() => {
     return {

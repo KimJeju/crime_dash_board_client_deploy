@@ -9,11 +9,11 @@ import { AvgSubjectOnChangeBtn } from '../../globals/AvgSubjectOnChangeBtn';
 import { mobileCrimeBranchTotalAvgSubjectState } from '../../state/mobile_crime_branch/mobile_total/MobileTotalCrimeState';
 // import { dynamicSubCategoryState } from '../../../web_clinet/state/crime_branch/total/DynamicSubjectState';
 // import { arrestAverageState, occurrencesAverageState } from '../../../web_clinet/state/crime_branch/total/SubjectAverageState';
-import SingDataBox from '../../../web_clinet/Components/SingleDataBox';
+import SingDataBox from '../../../web_clinet/components/SingleDataBox';
 import Container from 'react-bootstrap/esm/Container';
 import Stack from 'react-bootstrap/esm/Stack';
 import MobileToTalCrimeBarCharts from '../../components/mobile_chart/total/MobileToTalCrimeBarCharts';
-import { TotalBranchSubjectSelector } from '../../../globals/Componenets/selectors/TotalBranchSubjectSelector';
+import { TotalBranchSubjectSelector } from '../../../globals/componenets/selectors/TotalBranchSubjectSelector';
 
 const useStyles = makeStyles()(() => {
   return {
